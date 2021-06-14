@@ -18,7 +18,7 @@ extension SitesPresenter: SitesPresenterProtocol {
 }
 
 extension SitesPresenter: SitesInteractorOutputProtocol {
-    func interactorPushDataPresenter(receivedData: [SitesViewModel]) {
+    func interactorPushDataPresenter(receivedData: [SiteViewModel]) {
         view?.stopAndHideActivity()
         view?.presenterPushDataView(receivedData: receivedData)
         view?.hideTableView(isHide: false)

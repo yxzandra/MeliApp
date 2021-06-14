@@ -5,11 +5,14 @@ class SitesDataSource: NSObject {
     let cellTypes = SitesCellTypes.default
     
     private func prepareTitle(_ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TitleSiteCell", for: indexPath)
+        return cell
     }
     
-    private func prepareItem(_ viewModel: [SitesViewModel], _ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    private func prepareItem(_ viewModel: [SiteViewModel], _ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemSiteCell", for: indexPath) as? ItemSiteCell else { return UITableViewCell() }
+        cell.nameLabel.text = viewModel[indexPath.item].name
+        return cell
     }
 }
 
@@ -45,7 +48,7 @@ extension SitesDataSource: UITableViewDataSource {
         }
         
         cell.selectionStyle = .none
-        cell.backgroundColor = .white
+        cell.backgroundColor = .clear
         return cell
     }
 }

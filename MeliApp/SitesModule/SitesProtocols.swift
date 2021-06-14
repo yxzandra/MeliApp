@@ -4,7 +4,7 @@ protocol SitesViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: SitesPresenterProtocol? { get set }
     
-    func presenterPushDataView(receivedData: [SitesViewModel])
+    func presenterPushDataView(receivedData: [SiteViewModel])
     func loadActivity()
     func stopAndHideActivity()
     func hideTableView(isHide: Bool)
@@ -26,7 +26,7 @@ protocol SitesPresenterProtocol: AnyObject {
 
 protocol SitesInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
-    func interactorPushDataPresenter(receivedData: [SitesViewModel])
+    func interactorPushDataPresenter(receivedData: [SiteViewModel])
 }
 
 protocol SitesInteractorInputProtocol: AnyObject {
@@ -51,6 +51,8 @@ protocol SitesRemoteDataManagerInputProtocol: AnyObject {
 
 protocol SitesRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
+    
+    func returnData(sites: [Site])
 }
 
 protocol SitesLocalDataManagerInputProtocol: AnyObject {

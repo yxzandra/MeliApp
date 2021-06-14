@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EBE1F3658885E65CC7A6045 /* Pods_MeliApp_MeliAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E9F100A0B9D3D32398EE5 /* Pods_MeliApp_MeliAppUITests.framework */; };
+		1F6F14EAA57145E705AAD4E0 /* Pods_MeliAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBE5BECFF82331CFD22875B /* Pods_MeliAppTests.framework */; };
+		2AE629BB1AEB6159716C483D /* Pods_MeliApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCDF41E80B3E7CD49BAAB07 /* Pods_MeliApp.framework */; };
 		A41922652676873200C967E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922642676873200C967E0 /* AppDelegate.swift */; };
 		A41922672676873200C967E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922662676873200C967E0 /* SceneDelegate.swift */; };
 		A419226E2676873400C967E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A419226D2676873400C967E0 /* Assets.xcassets */; };
@@ -24,8 +27,15 @@
 		A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922AE26769E7500C967E0 /* SitesDataSource.swift */; };
 		A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B026769E8300C967E0 /* SitesDelegate.swift */; };
 		A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B226769F2000C967E0 /* SitesCellTypes.swift */; };
-		A41922B62676A05400C967E0 /* SitesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B52676A05400C967E0 /* SitesViewModel.swift */; };
+		A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B52676A05400C967E0 /* SiteViewModel.swift */; };
 		A41922B82676A57500C967E0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B72676A57500C967E0 /* Layout.swift */; };
+		A41922BD2676BD1B00C967E0 /* Site.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922BC2676BD1B00C967E0 /* Site.swift */; };
+		A41922C02676BEBB00C967E0 /* SiteMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922BF2676BEBB00C967E0 /* SiteMapper.swift */; };
+		A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922C82676D3E700C967E0 /* UIViewExtension.swift */; };
+		A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425D2B3267816E500852F37 /* ItemSiteCell.swift */; };
+		A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425D2B4267816E500852F37 /* ItemSiteCell.xib */; };
+		A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465B1F426781EAA00201B51 /* TitleSiteCell.swift */; };
+		A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465B1F526781EAA00201B51 /* TitleSiteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BBE5BECFF82331CFD22875B /* Pods_MeliAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F3EBE837DE164F360194901 /* Pods-MeliApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp.debug.xcconfig"; path = "Target Support Files/Pods-MeliApp/Pods-MeliApp.debug.xcconfig"; sourceTree = "<group>"; };
+		34351AE9296A9AC888FE6C16 /* Pods-MeliApp-MeliAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp-MeliAppUITests.release.xcconfig"; path = "Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3E4E9F100A0B9D3D32398EE5 /* Pods_MeliApp_MeliAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliApp_MeliAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DCDF41E80B3E7CD49BAAB07 /* Pods_MeliApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80349A1203247483C0647C5D /* Pods-MeliApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp.release.xcconfig"; path = "Target Support Files/Pods-MeliApp/Pods-MeliApp.release.xcconfig"; sourceTree = "<group>"; };
 		A41922612676873200C967E0 /* MeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41922642676873200C967E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41922662676873200C967E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +85,18 @@
 		A41922AE26769E7500C967E0 /* SitesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDataSource.swift; sourceTree = "<group>"; };
 		A41922B026769E8300C967E0 /* SitesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDelegate.swift; sourceTree = "<group>"; };
 		A41922B226769F2000C967E0 /* SitesCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesCellTypes.swift; sourceTree = "<group>"; };
-		A41922B52676A05400C967E0 /* SitesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewModel.swift; sourceTree = "<group>"; };
+		A41922B52676A05400C967E0 /* SiteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteViewModel.swift; sourceTree = "<group>"; };
 		A41922B72676A57500C967E0 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		A41922BC2676BD1B00C967E0 /* Site.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Site.swift; sourceTree = "<group>"; };
+		A41922BF2676BEBB00C967E0 /* SiteMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapper.swift; sourceTree = "<group>"; };
+		A41922C82676D3E700C967E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		A425D2B3267816E500852F37 /* ItemSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSiteCell.swift; sourceTree = "<group>"; };
+		A425D2B4267816E500852F37 /* ItemSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSiteCell.xib; sourceTree = "<group>"; };
+		A465B1F426781EAA00201B51 /* TitleSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSiteCell.swift; sourceTree = "<group>"; };
+		A465B1F526781EAA00201B51 /* TitleSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSiteCell.xib; sourceTree = "<group>"; };
+		B3D22F4B34582CD9014BB30F /* Pods-MeliAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.release.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DF3BDE803EB90A37181AC670 /* Pods-MeliApp-MeliAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp-MeliAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D261C18F5E552616644082 /* Pods-MeliAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE629BB1AEB6159716C483D /* Pods_MeliApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F6F14EAA57145E705AAD4E0 /* Pods_MeliAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +120,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EBE1F3658885E65CC7A6045 /* Pods_MeliApp_MeliAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2037AED484C090ABA79EF747 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F3EBE837DE164F360194901 /* Pods-MeliApp.debug.xcconfig */,
+				80349A1203247483C0647C5D /* Pods-MeliApp.release.xcconfig */,
+				DF3BDE803EB90A37181AC670 /* Pods-MeliApp-MeliAppUITests.debug.xcconfig */,
+				34351AE9296A9AC888FE6C16 /* Pods-MeliApp-MeliAppUITests.release.xcconfig */,
+				F2D261C18F5E552616644082 /* Pods-MeliAppTests.debug.xcconfig */,
+				B3D22F4B34582CD9014BB30F /* Pods-MeliAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2F902888B8ACAE3C080474E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DCDF41E80B3E7CD49BAAB07 /* Pods_MeliApp.framework */,
+				3E4E9F100A0B9D3D32398EE5 /* Pods_MeliApp_MeliAppUITests.framework */,
+				1BBE5BECFF82331CFD22875B /* Pods_MeliAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A41922582676873200C967E0 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +157,8 @@
 				A419227A2676873400C967E0 /* MeliAppTests */,
 				A41922852676873400C967E0 /* MeliAppUITests */,
 				A41922622676873200C967E0 /* Products */,
+				2037AED484C090ABA79EF747 /* Pods */,
+				2F902888B8ACAE3C080474E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,7 +177,8 @@
 			children = (
 				A41922642676873200C967E0 /* AppDelegate.swift */,
 				A41922662676873200C967E0 /* SceneDelegate.swift */,
-				A41922A22676887900C967E0 /* SitesModules */,
+				A41922A22676887900C967E0 /* SitesModule */,
+				A41922C12676BF4200C967E0 /* Components */,
 				A41922AA26769C7300C967E0 /* Extensions */,
 				A41922A626769BB400C967E0 /* Resources */,
 				A419226F2676873400C967E0 /* LaunchScreen.storyboard */,
@@ -150,24 +205,22 @@
 			path = MeliAppUITests;
 			sourceTree = "<group>";
 		};
-		A41922A22676887900C967E0 /* SitesModules */ = {
+		A41922A22676887900C967E0 /* SitesModule */ = {
 			isa = PBXGroup;
 			children = (
 				A41922B92676B00C00C967E0 /* Data */,
-				A41922B42676A02C00C967E0 /* Model */,
 				A41922AD26769E5600C967E0 /* View */,
 				A41922942676886300C967E0 /* SitesPresenter.swift */,
 				A41922962676886300C967E0 /* SitesProtocols.swift */,
 				A419229A2676886300C967E0 /* SitesWireFrame.swift */,
 			);
-			path = SitesModules;
+			path = SitesModule;
 			sourceTree = "<group>";
 		};
 		A41922A626769BB400C967E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				A419226D2676873400C967E0 /* Assets.xcassets */,
-				A41922B72676A57500C967E0 /* Layout.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				A41922AB26769C9D00C967E0 /* UIColorExtension.swift */,
+				A41922C82676D3E700C967E0 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +237,8 @@
 		A41922AD26769E5600C967E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A41922C52676D2C900C967E0 /* Cell */,
+				A41922BB2676BCF900C967E0 /* ViewModel */,
 				A41922B226769F2000C967E0 /* SitesCellTypes.swift */,
 				A41922AE26769E7500C967E0 /* SitesDataSource.swift */,
 				A41922B026769E8300C967E0 /* SitesDelegate.swift */,
@@ -194,7 +250,7 @@
 		A41922B42676A02C00C967E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A41922B52676A05400C967E0 /* SitesViewModel.swift */,
+				A41922BC2676BD1B00C967E0 /* Site.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,11 +258,64 @@
 		A41922B92676B00C00C967E0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A41922BE2676BE7600C967E0 /* Mapper */,
+				A41922B42676A02C00C967E0 /* Model */,
 				A41922972676886300C967E0 /* SitesInteractor.swift */,
 				A41922952676886300C967E0 /* SitesLocalDataManager.swift */,
 				A41922992676886300C967E0 /* SitesRemoteDataManager.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A41922BB2676BCF900C967E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A41922B52676A05400C967E0 /* SiteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A41922BE2676BE7600C967E0 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A41922BF2676BEBB00C967E0 /* SiteMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		A41922C12676BF4200C967E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A41922B72676A57500C967E0 /* Layout.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A41922C52676D2C900C967E0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A465B1F126781E6B00201B51 /* TitleSiteCell */,
+				A425D2B2267816E500852F37 /* ItemSiteCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A425D2B2267816E500852F37 /* ItemSiteCell */ = {
+			isa = PBXGroup;
+			children = (
+				A425D2B3267816E500852F37 /* ItemSiteCell.swift */,
+				A425D2B4267816E500852F37 /* ItemSiteCell.xib */,
+			);
+			path = ItemSiteCell;
+			sourceTree = "<group>";
+		};
+		A465B1F126781E6B00201B51 /* TitleSiteCell */ = {
+			isa = PBXGroup;
+			children = (
+				A465B1F426781EAA00201B51 /* TitleSiteCell.swift */,
+				A465B1F526781EAA00201B51 /* TitleSiteCell.xib */,
+			);
+			path = TitleSiteCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A419228B2676873400C967E0 /* Build configuration list for PBXNativeTarget "MeliApp" */;
 			buildPhases = (
+				CBD776D379EFF31F69E9AC3B /* [CP] Check Pods Manifest.lock */,
 				A419225D2676873200C967E0 /* Sources */,
 				A419225E2676873200C967E0 /* Frameworks */,
 				A419225F2676873200C967E0 /* Resources */,
+				8CF6255987078FA171B4A3AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A419228E2676873400C967E0 /* Build configuration list for PBXNativeTarget "MeliAppTests" */;
 			buildPhases = (
+				2F328B1B073423D6F51D836C /* [CP] Check Pods Manifest.lock */,
 				A41922732676873400C967E0 /* Sources */,
 				A41922742676873400C967E0 /* Frameworks */,
 				A41922752676873400C967E0 /* Resources */,
@@ -251,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A41922912676873400C967E0 /* Build configuration list for PBXNativeTarget "MeliAppUITests" */;
 			buildPhases = (
+				332694A28DE4EB95B9180785 /* [CP] Check Pods Manifest.lock */,
 				A419227E2676873400C967E0 /* Sources */,
 				A419227F2676873400C967E0 /* Frameworks */,
 				A41922802676873400C967E0 /* Resources */,
+				E236A78C9C720A38EA8E0935 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +427,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */,
+				A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */,
+				A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */,
 				A419226E2676873400C967E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +449,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F328B1B073423D6F51D836C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeliAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		332694A28DE4EB95B9180785 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeliApp-MeliAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CF6255987078FA171B4A3AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeliApp/Pods-MeliApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD776D379EFF31F69E9AC3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MeliApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E236A78C9C720A38EA8E0935 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A419225D2676873200C967E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -340,18 +559,23 @@
 			files = (
 				A41922B82676A57500C967E0 /* Layout.swift in Sources */,
 				A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */,
-				A41922B62676A05400C967E0 /* SitesViewModel.swift in Sources */,
+				A41922C02676BEBB00C967E0 /* SiteMapper.swift in Sources */,
+				A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */,
 				A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */,
+				A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */,
 				A41922A02676886300C967E0 /* SitesRemoteDataManager.swift in Sources */,
 				A41922652676873200C967E0 /* AppDelegate.swift in Sources */,
 				A41922672676873200C967E0 /* SceneDelegate.swift in Sources */,
 				A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */,
+				A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */,
 				A419229F2676886300C967E0 /* SitesView.swift in Sources */,
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
 				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
+				A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */,
 				A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */,
 				A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */,
+				A41922BD2676BD1B00C967E0 /* Site.swift in Sources */,
 				A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,7 +741,9 @@
 		};
 		A419228C2676873400C967E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F3EBE837DE164F360194901 /* Pods-MeliApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,13 +756,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mercadolibre.MeliApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A419228D2676873400C967E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80349A1203247483C0647C5D /* Pods-MeliApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,14 +777,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mercadolibre.MeliApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		A419228F2676873400C967E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D261C18F5E552616644082 /* Pods-MeliAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
@@ -577,8 +806,9 @@
 		};
 		A41922902676873400C967E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3D22F4B34582CD9014BB30F /* Pods-MeliAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
@@ -599,8 +829,9 @@
 		};
 		A41922922676873400C967E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3BDE803EB90A37181AC670 /* Pods-MeliApp-MeliAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
 				INFOPLIST_FILE = MeliAppUITests/Info.plist;
@@ -619,8 +850,9 @@
 		};
 		A41922932676873400C967E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34351AE9296A9AC888FE6C16 /* Pods-MeliApp-MeliAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
 				INFOPLIST_FILE = MeliAppUITests/Info.plist;

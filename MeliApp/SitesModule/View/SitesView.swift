@@ -8,11 +8,12 @@ class SitesView: UIViewController {
     private var delegate: SitesDelegate?
     private var dataSource: SitesDataSource?
     
-    var viewModel: [SitesViewModel]?
+    var viewModel: [SiteViewModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
+        registerCells()
         prepareActivityIndicator()
         presenter?.viewDidLoad()
     }
@@ -25,6 +26,8 @@ class SitesView: UIViewController {
         dataSource?.viewController = self
         delegate?.viewController = self
         
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
         tableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(tableView)
         Layout.pin(view: tableView, to: view)
@@ -36,6 +39,11 @@ class SitesView: UIViewController {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .clear
         tableView.contentInset = UIEdgeInsets(top: 14, left: .zero, bottom: 14, right: .zero)
+    }
+    
+    private func registerCells() {
+        tableView.register(UINib(nibName: "TitleSiteCell", bundle: nil), forCellReuseIdentifier: "TitleSiteCell")
+        tableView.register(UINib(nibName: "ItemSiteCell", bundle: nil), forCellReuseIdentifier: "ItemSiteCell")
     }
     
     private func prepareActivityIndicator() {
@@ -65,7 +73,7 @@ extension SitesView: SitesViewProtocol {
         }
     }
     
-    func presenterPushDataView(receivedData: [SitesViewModel]) {
+    func presenterPushDataView(receivedData: [SiteViewModel]) {
         self.viewModel = receivedData
         tableView.reloadData()
     }
