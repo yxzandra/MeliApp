@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  MeliApp
-//
-//  Created by Yxzandra Cordero on 13-06-21.
-//
-
 import UIKit
 
 @main

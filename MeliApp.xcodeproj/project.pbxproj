@@ -9,12 +9,23 @@
 /* Begin PBXBuildFile section */
 		A41922652676873200C967E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922642676873200C967E0 /* AppDelegate.swift */; };
 		A41922672676873200C967E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922662676873200C967E0 /* SceneDelegate.swift */; };
-		A41922692676873200C967E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922682676873200C967E0 /* ViewController.swift */; };
-		A419226C2676873200C967E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419226A2676873200C967E0 /* Main.storyboard */; };
 		A419226E2676873400C967E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A419226D2676873400C967E0 /* Assets.xcassets */; };
 		A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419226F2676873400C967E0 /* LaunchScreen.storyboard */; };
 		A419227C2676873400C967E0 /* MeliAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419227B2676873400C967E0 /* MeliAppTests.swift */; };
 		A41922872676873400C967E0 /* MeliAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922862676873400C967E0 /* MeliAppUITests.swift */; };
+		A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922942676886300C967E0 /* SitesPresenter.swift */; };
+		A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922952676886300C967E0 /* SitesLocalDataManager.swift */; };
+		A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922962676886300C967E0 /* SitesProtocols.swift */; };
+		A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922972676886300C967E0 /* SitesInteractor.swift */; };
+		A419229F2676886300C967E0 /* SitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922982676886300C967E0 /* SitesView.swift */; };
+		A41922A02676886300C967E0 /* SitesRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922992676886300C967E0 /* SitesRemoteDataManager.swift */; };
+		A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419229A2676886300C967E0 /* SitesWireFrame.swift */; };
+		A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922AB26769C9D00C967E0 /* UIColorExtension.swift */; };
+		A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922AE26769E7500C967E0 /* SitesDataSource.swift */; };
+		A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B026769E8300C967E0 /* SitesDelegate.swift */; };
+		A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B226769F2000C967E0 /* SitesCellTypes.swift */; };
+		A41922B62676A05400C967E0 /* SitesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B52676A05400C967E0 /* SitesViewModel.swift */; };
+		A41922B82676A57500C967E0 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922B72676A57500C967E0 /* Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +49,6 @@
 		A41922612676873200C967E0 /* MeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41922642676873200C967E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A41922662676873200C967E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A41922682676873200C967E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A419226B2676873200C967E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A419226D2676873400C967E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A41922702676873400C967E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41922722676873400C967E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +58,19 @@
 		A41922822676873400C967E0 /* MeliAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41922862676873400C967E0 /* MeliAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppUITests.swift; sourceTree = "<group>"; };
 		A41922882676873400C967E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A41922942676886300C967E0 /* SitesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesPresenter.swift; sourceTree = "<group>"; };
+		A41922952676886300C967E0 /* SitesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManager.swift; sourceTree = "<group>"; };
+		A41922962676886300C967E0 /* SitesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesProtocols.swift; sourceTree = "<group>"; };
+		A41922972676886300C967E0 /* SitesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractor.swift; sourceTree = "<group>"; };
+		A41922982676886300C967E0 /* SitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesView.swift; sourceTree = "<group>"; };
+		A41922992676886300C967E0 /* SitesRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManager.swift; sourceTree = "<group>"; };
+		A419229A2676886300C967E0 /* SitesWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrame.swift; sourceTree = "<group>"; };
+		A41922AB26769C9D00C967E0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		A41922AE26769E7500C967E0 /* SitesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDataSource.swift; sourceTree = "<group>"; };
+		A41922B026769E8300C967E0 /* SitesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDelegate.swift; sourceTree = "<group>"; };
+		A41922B226769F2000C967E0 /* SitesCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesCellTypes.swift; sourceTree = "<group>"; };
+		A41922B52676A05400C967E0 /* SitesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewModel.swift; sourceTree = "<group>"; };
+		A41922B72676A57500C967E0 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +123,9 @@
 			children = (
 				A41922642676873200C967E0 /* AppDelegate.swift */,
 				A41922662676873200C967E0 /* SceneDelegate.swift */,
-				A41922682676873200C967E0 /* ViewController.swift */,
-				A419226A2676873200C967E0 /* Main.storyboard */,
-				A419226D2676873400C967E0 /* Assets.xcassets */,
+				A41922A22676887900C967E0 /* SitesModules */,
+				A41922AA26769C7300C967E0 /* Extensions */,
+				A41922A626769BB400C967E0 /* Resources */,
 				A419226F2676873400C967E0 /* LaunchScreen.storyboard */,
 				A41922722676873400C967E0 /* Info.plist */,
 			);
@@ -126,6 +148,65 @@
 				A41922882676873400C967E0 /* Info.plist */,
 			);
 			path = MeliAppUITests;
+			sourceTree = "<group>";
+		};
+		A41922A22676887900C967E0 /* SitesModules */ = {
+			isa = PBXGroup;
+			children = (
+				A41922B92676B00C00C967E0 /* Data */,
+				A41922B42676A02C00C967E0 /* Model */,
+				A41922AD26769E5600C967E0 /* View */,
+				A41922942676886300C967E0 /* SitesPresenter.swift */,
+				A41922962676886300C967E0 /* SitesProtocols.swift */,
+				A419229A2676886300C967E0 /* SitesWireFrame.swift */,
+			);
+			path = SitesModules;
+			sourceTree = "<group>";
+		};
+		A41922A626769BB400C967E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A419226D2676873400C967E0 /* Assets.xcassets */,
+				A41922B72676A57500C967E0 /* Layout.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A41922AA26769C7300C967E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A41922AB26769C9D00C967E0 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A41922AD26769E5600C967E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A41922B226769F2000C967E0 /* SitesCellTypes.swift */,
+				A41922AE26769E7500C967E0 /* SitesDataSource.swift */,
+				A41922B026769E8300C967E0 /* SitesDelegate.swift */,
+				A41922982676886300C967E0 /* SitesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A41922B42676A02C00C967E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A41922B52676A05400C967E0 /* SitesViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A41922B92676B00C00C967E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A41922972676886300C967E0 /* SitesInteractor.swift */,
+				A41922952676886300C967E0 /* SitesLocalDataManager.swift */,
+				A41922992676886300C967E0 /* SitesRemoteDataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +314,6 @@
 			files = (
 				A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */,
 				A419226E2676873400C967E0 /* Assets.xcassets in Resources */,
-				A419226C2676873200C967E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +338,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A41922692676873200C967E0 /* ViewController.swift in Sources */,
+				A41922B82676A57500C967E0 /* Layout.swift in Sources */,
+				A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */,
+				A41922B62676A05400C967E0 /* SitesViewModel.swift in Sources */,
+				A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */,
+				A41922A02676886300C967E0 /* SitesRemoteDataManager.swift in Sources */,
 				A41922652676873200C967E0 /* AppDelegate.swift in Sources */,
 				A41922672676873200C967E0 /* SceneDelegate.swift in Sources */,
+				A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */,
+				A419229F2676886300C967E0 /* SitesView.swift in Sources */,
+				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
+				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
+				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
+				A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */,
+				A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */,
+				A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +388,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A419226A2676873200C967E0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A419226B2676873200C967E0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A419226F2676873400C967E0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
