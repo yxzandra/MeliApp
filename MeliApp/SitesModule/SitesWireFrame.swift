@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 
 class SitesWireFrame: SitesWireFrameProtocol {
-
     class func createSitesModule() -> UIViewController {
         let navController = UINavigationController(rootViewController: SitesView())
         
@@ -26,4 +25,6 @@ class SitesWireFrame: SitesWireFrameProtocol {
         }
         return UIViewController()
     }
+
+    func presentViewSearch(from view: SitesViewProtocol, idSide: String) {}
 }

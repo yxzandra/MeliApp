@@ -13,6 +13,7 @@ protocol SitesViewProtocol: AnyObject {
 protocol SitesWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createSitesModule() -> UIViewController
+    func presentViewSearch(from view: SitesViewProtocol, idSide: String)
 }
 
 protocol SitesPresenterProtocol: AnyObject {
@@ -22,6 +23,7 @@ protocol SitesPresenterProtocol: AnyObject {
     var wireFrame: SitesWireFrameProtocol? { get set }
     
     func viewDidLoad()
+    func siteSelected(site: SiteViewModel)
 }
 
 protocol SitesInteractorOutputProtocol: AnyObject {
@@ -36,6 +38,7 @@ protocol SitesInteractorInputProtocol: AnyObject {
     var remoteDatamanager: SitesRemoteDataManagerInputProtocol? { get set }
     
     func getSites()
+    func siteSelected(idSide: String)
 }
 
 protocol SitesDataManagerInputProtocol: AnyObject {
@@ -57,4 +60,5 @@ protocol SitesRemoteDataManagerOutputProtocol: AnyObject {
 
 protocol SitesLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
+    func internalSaveSite(idSite: String)
 }

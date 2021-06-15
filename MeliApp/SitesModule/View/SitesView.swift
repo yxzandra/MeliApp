@@ -38,7 +38,7 @@ class SitesView: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .clear
-        tableView.contentInset = UIEdgeInsets(top: 14, left: .zero, bottom: 14, right: .zero)
+        tableView.alwaysBounceHorizontal = false
     }
     
     private func registerCells() {

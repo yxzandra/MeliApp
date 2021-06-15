@@ -1,10 +1,3 @@
-//
-//  TitleSiteCell.swift
-//  MeliApp
-//
-//  Created by Yxzandra Cordero on 14-06-21.
-//
-
 import UIKit
 
 class TitleSiteCell: UITableViewCell {
@@ -18,12 +11,6 @@ class TitleSiteCell: UITableViewCell {
         
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func prepareLogoImage() {
         logoImage.topAnchor.constraint(
             equalTo: contentView.topAnchor,

@@ -9,6 +9,10 @@ class SitesInteractor: SitesInteractorInputProtocol {
     func getSites() {
         remoteDatamanager?.externalGetData()
     }
+    
+    func siteSelected(idSide: String) {
+        localDatamanager?.internalSaveSite(idSite: idSide)
+    }
 }
 
 extension SitesInteractor: SitesRemoteDataManagerOutputProtocol {

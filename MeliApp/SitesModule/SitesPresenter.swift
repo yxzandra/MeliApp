@@ -15,6 +15,11 @@ extension SitesPresenter: SitesPresenterProtocol {
         view?.loadActivity()
         view?.hideTableView(isHide: true)
     }
+    
+    func siteSelected(site: SiteViewModel) {
+        interactor?.siteSelected(idSide: site.id)
+        wireFrame?.presentViewSearch(from: view!, idSide: site.id)
+    }
 }
 
 extension SitesPresenter: SitesInteractorOutputProtocol {
