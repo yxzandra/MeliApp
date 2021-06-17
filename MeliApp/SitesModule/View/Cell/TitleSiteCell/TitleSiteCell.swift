@@ -11,7 +11,7 @@ class TitleSiteCell: UITableViewCell {
         
     }
 
-    func prepareLogoImage() {
+    private func prepareLogoImage() {
         logoImage.topAnchor.constraint(
             equalTo: contentView.topAnchor,
             constant: CGFloat(12)
@@ -27,7 +27,7 @@ class TitleSiteCell: UITableViewCell {
         
     }
     
-    func prepareContentLabel() {
+    private func prepareContentLabel() {
         contentLabel.topAnchor.constraint(
             equalTo: logoImage.topAnchor
         ).isActive = true

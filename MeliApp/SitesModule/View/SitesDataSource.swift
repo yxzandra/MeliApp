@@ -1,16 +1,17 @@
 import UIKit
 
 class SitesDataSource: NSObject {
-    weak var viewController: SitesView?
+    typealias Constants = SitesViewConstants
+    weak var viewController: SitesViewController?
     let cellTypes = SitesCellTypes.default
     
     private func prepareTitle(_ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TitleSiteCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.nibTitleSiteCell, for: indexPath)
         return cell
     }
     
     private func prepareItem(_ viewModel: [SiteViewModel], _ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ItemSiteCell", for: indexPath) as? ItemSiteCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.nibItemSiteCell, for: indexPath) as? ItemSiteCell else { return UITableViewCell() }
         cell.nameLabel.text = viewModel[indexPath.item].name
         return cell
     }

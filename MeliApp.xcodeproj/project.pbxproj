@@ -20,7 +20,7 @@
 		A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922952676886300C967E0 /* SitesLocalDataManager.swift */; };
 		A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922962676886300C967E0 /* SitesProtocols.swift */; };
 		A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922972676886300C967E0 /* SitesInteractor.swift */; };
-		A419229F2676886300C967E0 /* SitesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922982676886300C967E0 /* SitesView.swift */; };
+		A419229F2676886300C967E0 /* SitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922982676886300C967E0 /* SitesViewController.swift */; };
 		A41922A02676886300C967E0 /* SitesRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922992676886300C967E0 /* SitesRemoteDataManager.swift */; };
 		A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419229A2676886300C967E0 /* SitesWireFrame.swift */; };
 		A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922AB26769C9D00C967E0 /* UIColorExtension.swift */; };
@@ -34,8 +34,11 @@
 		A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922C82676D3E700C967E0 /* UIViewExtension.swift */; };
 		A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425D2B3267816E500852F37 /* ItemSiteCell.swift */; };
 		A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425D2B4267816E500852F37 /* ItemSiteCell.xib */; };
+		A42EADFD267AD558001EFFFD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */; };
 		A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465B1F426781EAA00201B51 /* TitleSiteCell.swift */; };
 		A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465B1F526781EAA00201B51 /* TitleSiteCell.xib */; };
+		A49E9C31267AD03500422954 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C30267AD03500422954 /* Error.swift */; };
+		A4C7589A26797611001343B9 /* SitesViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7589926797611001343B9 /* SitesViewConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +81,7 @@
 		A41922952676886300C967E0 /* SitesLocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManager.swift; sourceTree = "<group>"; };
 		A41922962676886300C967E0 /* SitesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesProtocols.swift; sourceTree = "<group>"; };
 		A41922972676886300C967E0 /* SitesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractor.swift; sourceTree = "<group>"; };
-		A41922982676886300C967E0 /* SitesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesView.swift; sourceTree = "<group>"; };
+		A41922982676886300C967E0 /* SitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewController.swift; sourceTree = "<group>"; };
 		A41922992676886300C967E0 /* SitesRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManager.swift; sourceTree = "<group>"; };
 		A419229A2676886300C967E0 /* SitesWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrame.swift; sourceTree = "<group>"; };
 		A41922AB26769C9D00C967E0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -92,8 +95,11 @@
 		A41922C82676D3E700C967E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A425D2B3267816E500852F37 /* ItemSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSiteCell.swift; sourceTree = "<group>"; };
 		A425D2B4267816E500852F37 /* ItemSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSiteCell.xib; sourceTree = "<group>"; };
+		A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		A465B1F426781EAA00201B51 /* TitleSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSiteCell.swift; sourceTree = "<group>"; };
 		A465B1F526781EAA00201B51 /* TitleSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSiteCell.xib; sourceTree = "<group>"; };
+		A49E9C30267AD03500422954 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		A4C7589926797611001343B9 /* SitesViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewConstants.swift; sourceTree = "<group>"; };
 		B3D22F4B34582CD9014BB30F /* Pods-MeliAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.release.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF3BDE803EB90A37181AC670 /* Pods-MeliApp-MeliAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp-MeliAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2D261C18F5E552616644082 /* Pods-MeliAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 			children = (
 				A41922AB26769C9D00C967E0 /* UIColorExtension.swift */,
 				A41922C82676D3E700C967E0 /* UIViewExtension.swift */,
+				A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,7 +249,8 @@
 				A41922B226769F2000C967E0 /* SitesCellTypes.swift */,
 				A41922AE26769E7500C967E0 /* SitesDataSource.swift */,
 				A41922B026769E8300C967E0 /* SitesDelegate.swift */,
-				A41922982676886300C967E0 /* SitesView.swift */,
+				A4C7589926797611001343B9 /* SitesViewConstants.swift */,
+				A41922982676886300C967E0 /* SitesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				A41922BC2676BD1B00C967E0 /* Site.swift */,
+				A49E9C30267AD03500422954 /* Error.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -557,8 +566,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C7589A26797611001343B9 /* SitesViewConstants.swift in Sources */,
 				A41922B82676A57500C967E0 /* Layout.swift in Sources */,
 				A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */,
+				A42EADFD267AD558001EFFFD /* UIViewControllerExtension.swift in Sources */,
 				A41922C02676BEBB00C967E0 /* SiteMapper.swift in Sources */,
 				A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */,
 				A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */,
@@ -568,8 +579,9 @@
 				A41922672676873200C967E0 /* SceneDelegate.swift in Sources */,
 				A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */,
 				A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */,
-				A419229F2676886300C967E0 /* SitesView.swift in Sources */,
+				A419229F2676886300C967E0 /* SitesViewController.swift in Sources */,
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
+				A49E9C31267AD03500422954 /* Error.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
 				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
 				A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */,

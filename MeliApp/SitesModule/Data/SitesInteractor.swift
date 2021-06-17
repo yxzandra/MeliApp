@@ -16,6 +16,10 @@ class SitesInteractor: SitesInteractorInputProtocol {
 }
 
 extension SitesInteractor: SitesRemoteDataManagerOutputProtocol {
+    func errorData(statusCode: Int, error: Error) {
+        presenter?.interactorErrorDataPresenter(statusCode: statusCode, error: error)
+    }
+    
     func returnData(sites: [Site]) {
         let viewModel = mapper.reverseMap(values: sites)
         presenter?.interactorPushDataPresenter(receivedData: viewModel)

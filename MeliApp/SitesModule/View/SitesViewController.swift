@@ -1,31 +1,41 @@
 import UIKit
 
-class SitesView: UIViewController {
+class SitesViewController: UIViewController {
+    typealias Constants = SitesViewConstants
     internal var presenter: SitesPresenterProtocol?
     
-    private let tableView = UITableView()
     private let loadIndicatorView = UIActivityIndicatorView(style: .large)
     private var delegate: SitesDelegate?
     private var dataSource: SitesDataSource?
+    private let tableView = UITableView()
+    private let retryButton = UIButton()
     
     var viewModel: [SiteViewModel]?
+    
+    convenience init(
+        dataSource: SitesDataSource,
+        delegate: SitesDelegate,
+        presenter: SitesPresenter
+    ) {
+        self.init()
+        dataSource.viewController = self
+        delegate.viewController = self
+        self.dataSource = dataSource
+        self.delegate = delegate
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareTableView()
         registerCells()
         prepareActivityIndicator()
+        prepareRetryButton()
         presenter?.viewDidLoad()
     }
     
     private func prepareTableView() {
         self.view.backgroundColor = .backgroundColor
-        self.navigationItem.title = "Paises Asociados"
-        self.dataSource = SitesDataSource()
-        self.delegate = SitesDelegate()
-        dataSource?.viewController = self
-        delegate?.viewController = self
-        
+        self.navigationItem.title = Constants.titleView
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -42,8 +52,8 @@ class SitesView: UIViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: "TitleSiteCell", bundle: nil), forCellReuseIdentifier: "TitleSiteCell")
-        tableView.register(UINib(nibName: "ItemSiteCell", bundle: nil), forCellReuseIdentifier: "ItemSiteCell")
+        tableView.register(UINib(nibName: Constants.nibTitleSiteCell, bundle: nil), forCellReuseIdentifier: Constants.nibTitleSiteCell)
+        tableView.register(UINib(nibName: Constants.nibItemSiteCell, bundle: nil), forCellReuseIdentifier: Constants.nibItemSiteCell)
     }
     
     private func prepareActivityIndicator() {
@@ -51,12 +61,37 @@ class SitesView: UIViewController {
         self.loadIndicatorView.color = .titleColor
         self.view.addSubview(self.loadIndicatorView)
     }
+    
+    private func prepareRetryButton() {
+        self.retryButton.center = self.view.center
+        self.retryButton.setTitle("Reintentar", for: .normal)
+        self.retryButton.setTitleColor(.titleColor, for: .normal)
+        self.retryButton.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.retryButton)
+        Layout.pin(view: retryButton, to: view)
+        
+        self.retryButton.addTarget(self, action: #selector(retryTouchUpInside), for: .touchUpInside)
+    }
+    
+    @objc func retryTouchUpInside() {
+        presenter?.viewDidLoad()
+    }
 }
 
-extension SitesView: SitesViewProtocol {
+extension SitesViewController: SitesViewProtocol {
+    func showMessageError(message: String) {
+        self.showToast(message: message, seconds: 5.0)
+    }
+    
     func hideTableView(isHide: Bool) {
         DispatchQueue.main.async {
             self.tableView.isHidden = isHide
+        }
+    }
+    
+    func hideRetryButton(isHide: Bool) {
+        DispatchQueue.main.async {
+            self.retryButton.isHidden = isHide
         }
     }
     

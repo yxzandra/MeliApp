@@ -3,9 +3,15 @@ import UIKit
 
 class SitesWireFrame: SitesWireFrameProtocol {
     class func createSitesModule() -> UIViewController {
-        let navController = UINavigationController(rootViewController: SitesView())
+        let navController = UINavigationController(
+            rootViewController: SitesViewController(
+                dataSource: SitesDataSource(),
+                delegate: SitesDelegate(),
+                presenter: SitesPresenter()
+            )
+        )
         
-        if let view = navController.children.first as? SitesView {
+        if let view = navController.children.first as? SitesViewController {
             let presenter: SitesPresenterProtocol & SitesInteractorOutputProtocol = SitesPresenter()
             let interactor: SitesInteractorInputProtocol & SitesRemoteDataManagerOutputProtocol = SitesInteractor()
             let localDataManager: SitesLocalDataManagerInputProtocol = SitesLocalDataManager()

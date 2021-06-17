@@ -8,7 +8,7 @@ class ItemSiteCell: UITableViewCell {
         prepareNameLabel()
     }
 
-    func prepareNameLabel() {
+    private func prepareNameLabel() {
         nameLabel.topAnchor.constraint(
             equalTo: contentView.topAnchor
         ).isActive = true
