@@ -14,7 +14,6 @@
 		A41922672676873200C967E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922662676873200C967E0 /* SceneDelegate.swift */; };
 		A419226E2676873400C967E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A419226D2676873400C967E0 /* Assets.xcassets */; };
 		A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A419226F2676873400C967E0 /* LaunchScreen.storyboard */; };
-		A419227C2676873400C967E0 /* MeliAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A419227B2676873400C967E0 /* MeliAppTests.swift */; };
 		A41922872676873400C967E0 /* MeliAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922862676873400C967E0 /* MeliAppUITests.swift */; };
 		A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922942676886300C967E0 /* SitesPresenter.swift */; };
 		A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922952676886300C967E0 /* SitesLocalDataManager.swift */; };
@@ -35,10 +34,34 @@
 		A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425D2B3267816E500852F37 /* ItemSiteCell.swift */; };
 		A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425D2B4267816E500852F37 /* ItemSiteCell.xib */; };
 		A42EADFD267AD558001EFFFD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */; };
+		A44B84A9267C2107005C348D /* SitesRemoteDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */; };
+		A44B84AD267C2154005C348D /* sites_404.json in Resources */ = {isa = PBXBuildFile; fileRef = A44B84AC267C2154005C348D /* sites_404.json */; };
+		A44B84AF267C225D005C348D /* Error+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84AE267C225D005C348D /* Error+Mock.swift */; };
+		A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */; };
+		A44B84B3267C24EA005C348D /* SitesInteractorOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */; };
+		A44B84B5267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */; };
 		A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465B1F426781EAA00201B51 /* TitleSiteCell.swift */; };
 		A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465B1F526781EAA00201B51 /* TitleSiteCell.xib */; };
+		A47463EA267D53F40099AD1E /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463E9267D53F40099AD1E /* TestCase.swift */; };
+		A47463EC267D576A0099AD1E /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */; };
+		A47463EE267D58480099AD1E /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */; };
+		A47463F2267D60B70099AD1E /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463F1267D60B70099AD1E /* AppDelegateTests.swift */; };
+		A49E9C1C267AAE5600422954 /* SitesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */; };
+		A49E9C1F267AB15B00422954 /* sites_200.json in Resources */ = {isa = PBXBuildFile; fileRef = A49E9C1E267AB15B00422954 /* sites_200.json */; };
+		A49E9C21267AB18600422954 /* SiteViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C20267AB18600422954 /* SiteViewModel+Mock.swift */; };
+		A49E9C23267AB1E500422954 /* Site+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C22267AB1E500422954 /* Site+Mock.swift */; };
+		A49E9C27267AB3D300422954 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C26267AB3D300422954 /* TestUtils.swift */; };
+		A49E9C29267ACB9700422954 /* SitesViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C28267ACB9700422954 /* SitesViewMock.swift */; };
+		A49E9C2D267ACD5800422954 /* SitesWireFrameMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C2C267ACD5800422954 /* SitesWireFrameMock.swift */; };
+		A49E9C2F267ACE7600422954 /* SitesInteractorInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */; };
 		A49E9C31267AD03500422954 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C30267AD03500422954 /* Error.swift */; };
 		A4C7589A26797611001343B9 /* SitesViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7589926797611001343B9 /* SitesViewConstants.swift */; };
+		A4C7589F26797A8F001343B9 /* SitesDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7589E26797A8F001343B9 /* SitesDataSourceTests.swift */; };
+		A4C758A126797AA8001343B9 /* SitesDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C758A026797AA8001343B9 /* SitesDelegateTests.swift */; };
+		A4C758A526797AD2001343B9 /* SitesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C758A426797AD2001343B9 /* SitesInteractorTests.swift */; };
+		A4C758A726797AEB001343B9 /* SitesLocalDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C758A626797AEB001343B9 /* SitesLocalDataManagerTests.swift */; };
+		A4C758AC26797B2E001343B9 /* SiteMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C758AB26797B2E001343B9 /* SiteMapperTests.swift */; };
+		A4C758AE26797B59001343B9 /* SitesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C758AD26797B59001343B9 /* SitesPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +95,6 @@
 		A41922702676873400C967E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A41922722676873400C967E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41922772676873400C967E0 /* MeliAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A419227B2676873400C967E0 /* MeliAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppTests.swift; sourceTree = "<group>"; };
 		A419227D2676873400C967E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A41922822676873400C967E0 /* MeliAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41922862676873400C967E0 /* MeliAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliAppUITests.swift; sourceTree = "<group>"; };
@@ -96,10 +118,34 @@
 		A425D2B3267816E500852F37 /* ItemSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSiteCell.swift; sourceTree = "<group>"; };
 		A425D2B4267816E500852F37 /* ItemSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSiteCell.xib; sourceTree = "<group>"; };
 		A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerMock.swift; sourceTree = "<group>"; };
+		A44B84AC267C2154005C348D /* sites_404.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sites_404.json; sourceTree = "<group>"; };
+		A44B84AE267C225D005C348D /* Error+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Mock.swift"; sourceTree = "<group>"; };
+		A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManagerMock.swift; sourceTree = "<group>"; };
+		A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorOutputMock.swift; sourceTree = "<group>"; };
+		A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerOutputMock.swift; sourceTree = "<group>"; };
 		A465B1F426781EAA00201B51 /* TitleSiteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSiteCell.swift; sourceTree = "<group>"; };
 		A465B1F526781EAA00201B51 /* TitleSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSiteCell.xib; sourceTree = "<group>"; };
+		A47463E9267D53F40099AD1E /* TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
+		A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
+		A47463F1267D60B70099AD1E /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesPresenterMock.swift; sourceTree = "<group>"; };
+		A49E9C1E267AB15B00422954 /* sites_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sites_200.json; sourceTree = "<group>"; };
+		A49E9C20267AB18600422954 /* SiteViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SiteViewModel+Mock.swift"; sourceTree = "<group>"; };
+		A49E9C22267AB1E500422954 /* Site+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Site+Mock.swift"; sourceTree = "<group>"; };
+		A49E9C26267AB3D300422954 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		A49E9C28267ACB9700422954 /* SitesViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewMock.swift; sourceTree = "<group>"; };
+		A49E9C2C267ACD5800422954 /* SitesWireFrameMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrameMock.swift; sourceTree = "<group>"; };
+		A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorInputMock.swift; sourceTree = "<group>"; };
 		A49E9C30267AD03500422954 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A4C7589926797611001343B9 /* SitesViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewConstants.swift; sourceTree = "<group>"; };
+		A4C7589E26797A8F001343B9 /* SitesDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDataSourceTests.swift; sourceTree = "<group>"; };
+		A4C758A026797AA8001343B9 /* SitesDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesDelegateTests.swift; sourceTree = "<group>"; };
+		A4C758A426797AD2001343B9 /* SitesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorTests.swift; sourceTree = "<group>"; };
+		A4C758A626797AEB001343B9 /* SitesLocalDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManagerTests.swift; sourceTree = "<group>"; };
+		A4C758AB26797B2E001343B9 /* SiteMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapperTests.swift; sourceTree = "<group>"; };
+		A4C758AD26797B59001343B9 /* SitesPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesPresenterTests.swift; sourceTree = "<group>"; };
 		B3D22F4B34582CD9014BB30F /* Pods-MeliAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.release.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF3BDE803EB90A37181AC670 /* Pods-MeliApp-MeliAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliApp-MeliAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeliApp-MeliAppUITests/Pods-MeliApp-MeliAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2D261C18F5E552616644082 /* Pods-MeliAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MeliAppTests/Pods-MeliAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,8 +240,12 @@
 		A419227A2676873400C967E0 /* MeliAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A419227B2676873400C967E0 /* MeliAppTests.swift */,
+				A47463E8267D53610099AD1E /* Extensions */,
+				A4C7589B267977AE001343B9 /* SitesModule */,
 				A419227D2676873400C967E0 /* Info.plist */,
+				A47463E9267D53F40099AD1E /* TestCase.swift */,
+				A49E9C26267AB3D300422954 /* TestUtils.swift */,
+				A47463F1267D60B70099AD1E /* AppDelegateTests.swift */,
 			);
 			path = MeliAppTests;
 			sourceTree = "<group>";
@@ -327,6 +377,81 @@
 			path = TitleSiteCell;
 			sourceTree = "<group>";
 		};
+		A47463E8267D53610099AD1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */,
+				A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A49E9C1A267AAE3400422954 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A49E9C1D267AB14300422954 /* JSON */,
+				A44B84AE267C225D005C348D /* Error+Mock.swift */,
+				A49E9C22267AB1E500422954 /* Site+Mock.swift */,
+				A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */,
+				A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */,
+				A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */,
+				A49E9C28267ACB9700422954 /* SitesViewMock.swift */,
+				A49E9C2C267ACD5800422954 /* SitesWireFrameMock.swift */,
+				A49E9C20267AB18600422954 /* SiteViewModel+Mock.swift */,
+				A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */,
+				A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */,
+				A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A49E9C1D267AB14300422954 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A49E9C1E267AB15B00422954 /* sites_200.json */,
+				A44B84AC267C2154005C348D /* sites_404.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A4C7589B267977AE001343B9 /* SitesModule */ = {
+			isa = PBXGroup;
+			children = (
+				A4C7589C267977ED001343B9 /* Data */,
+				A49E9C1A267AAE3400422954 /* Mocks */,
+				A4C7589D267977F3001343B9 /* View */,
+				A4C758AD26797B59001343B9 /* SitesPresenterTests.swift */,
+			);
+			path = SitesModule;
+			sourceTree = "<group>";
+		};
+		A4C7589C267977ED001343B9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A4C758AA26797B13001343B9 /* Mapper */,
+				A4C758A426797AD2001343B9 /* SitesInteractorTests.swift */,
+				A4C758A626797AEB001343B9 /* SitesLocalDataManagerTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A4C7589D267977F3001343B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4C7589E26797A8F001343B9 /* SitesDataSourceTests.swift */,
+				A4C758A026797AA8001343B9 /* SitesDelegateTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4C758AA26797B13001343B9 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A4C758AB26797B2E001343B9 /* SiteMapperTests.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -446,6 +571,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49E9C1F267AB15B00422954 /* sites_200.json in Resources */,
+				A44B84AD267C2154005C348D /* sites_404.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,7 +723,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A419227C2676873400C967E0 /* MeliAppTests.swift in Sources */,
+				A49E9C21267AB18600422954 /* SiteViewModel+Mock.swift in Sources */,
+				A4C758AC26797B2E001343B9 /* SiteMapperTests.swift in Sources */,
+				A47463EE267D58480099AD1E /* UIViewControllerExtensionTests.swift in Sources */,
+				A47463EC267D576A0099AD1E /* UIViewExtensionTests.swift in Sources */,
+				A49E9C2F267ACE7600422954 /* SitesInteractorInputMock.swift in Sources */,
+				A4C758A526797AD2001343B9 /* SitesInteractorTests.swift in Sources */,
+				A44B84B5267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift in Sources */,
+				A49E9C23267AB1E500422954 /* Site+Mock.swift in Sources */,
+				A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */,
+				A44B84A9267C2107005C348D /* SitesRemoteDataManagerMock.swift in Sources */,
+				A47463F2267D60B70099AD1E /* AppDelegateTests.swift in Sources */,
+				A49E9C2D267ACD5800422954 /* SitesWireFrameMock.swift in Sources */,
+				A44B84AF267C225D005C348D /* Error+Mock.swift in Sources */,
+				A4C758AE26797B59001343B9 /* SitesPresenterTests.swift in Sources */,
+				A47463EA267D53F40099AD1E /* TestCase.swift in Sources */,
+				A4C758A126797AA8001343B9 /* SitesDelegateTests.swift in Sources */,
+				A49E9C1C267AAE5600422954 /* SitesPresenterMock.swift in Sources */,
+				A49E9C27267AB3D300422954 /* TestUtils.swift in Sources */,
+				A44B84B3267C24EA005C348D /* SitesInteractorOutputMock.swift in Sources */,
+				A4C758A726797AEB001343B9 /* SitesLocalDataManagerTests.swift in Sources */,
+				A4C7589F26797A8F001343B9 /* SitesDataSourceTests.swift in Sources */,
+				A49E9C29267ACB9700422954 /* SitesViewMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,7 +908,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
-				INFOPLIST_FILE = MeliApp/Info.plist;
+				INFOPLIST_FILE = MeliApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -781,7 +929,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YCVP8LCFL4;
-				INFOPLIST_FILE = MeliApp/Info.plist;
+				INFOPLIST_FILE = MeliApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
