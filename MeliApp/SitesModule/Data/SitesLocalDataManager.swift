@@ -1,6 +1,6 @@
 import Foundation
 
-class SitesLocalDataManager:SitesLocalDataManagerInputProtocol {
+class SitesLocalDataManager: SitesLocalDataManagerInputProtocol {
 
     func internalSaveSite(idSite: String) {
         let defaults = UserDefaults.standard

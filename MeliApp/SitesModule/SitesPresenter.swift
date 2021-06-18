@@ -5,6 +5,17 @@ class SitesPresenter  {
     weak var view: SitesViewProtocol?
     var interactor: SitesInteractorInputProtocol?
     var wireFrame: SitesWireFrameProtocol?
+    
+    convenience init(
+        view: SitesViewProtocol,
+        interactor: SitesInteractorInputProtocol,
+        wireFrame: SitesWireFrameProtocol
+    ) {
+        self.init()
+        self.view = view
+        self.interactor = interactor
+        self.wireFrame = wireFrame
+    }
 }
 
 extension SitesPresenter: SitesPresenterProtocol {

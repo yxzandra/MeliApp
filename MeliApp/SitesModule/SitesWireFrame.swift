@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class SitesWireFrame: SitesWireFrameProtocol {
-    class func createSitesModule() -> UIViewController {
+    static func createSitesModule() -> UIViewController {
         let navController = UINavigationController(
             rootViewController: SitesViewController(
                 dataSource: SitesDataSource(),

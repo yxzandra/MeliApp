@@ -15,7 +15,7 @@ class SitesViewController: UIViewController {
     convenience init(
         dataSource: SitesDataSource,
         delegate: SitesDelegate,
-        presenter: SitesPresenter
+        presenter: SitesPresenterProtocol
     ) {
         self.init()
         dataSource.viewController = self

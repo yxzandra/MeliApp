@@ -6,6 +6,17 @@ class SitesInteractor: SitesInteractorInputProtocol {
     var remoteDatamanager: SitesRemoteDataManagerInputProtocol?
     let mapper = SiteMapper()
     
+    convenience init(
+        presenter: SitesInteractorOutputProtocol,
+        localDatamanager: SitesLocalDataManagerInputProtocol,
+        remoteDatamanager: SitesRemoteDataManagerInputProtocol
+    ) {
+        self.init()
+        self.presenter = presenter
+        self.localDatamanager = localDatamanager
+        self.remoteDatamanager = remoteDatamanager
+    }
+    
     func getSites() {
         remoteDatamanager?.externalGetData()
     }

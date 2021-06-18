@@ -183,12 +183,10 @@
 			children = (
 				A41922642676873200C967E0 /* AppDelegate.swift */,
 				A41922662676873200C967E0 /* SceneDelegate.swift */,
-				A41922A22676887900C967E0 /* SitesModule */,
 				A41922C12676BF4200C967E0 /* Components */,
 				A41922AA26769C7300C967E0 /* Extensions */,
 				A41922A626769BB400C967E0 /* Resources */,
-				A419226F2676873400C967E0 /* LaunchScreen.storyboard */,
-				A41922722676873400C967E0 /* Info.plist */,
+				A41922A22676887900C967E0 /* SitesModule */,
 			);
 			path = MeliApp;
 			sourceTree = "<group>";
@@ -226,6 +224,8 @@
 		A41922A626769BB400C967E0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A41922722676873400C967E0 /* Info.plist */,
+				A419226F2676873400C967E0 /* LaunchScreen.storyboard */,
 				A419226D2676873400C967E0 /* Assets.xcassets */,
 			);
 			path = Resources;
