@@ -10,11 +10,8 @@ class SearchPresenter  {
 }
 
 extension SearchPresenter: SearchPresenterProtocol {
-    // TODO: implement presenter methods
-    func viewDidLoad() {
+    func searchItem(item: String) {
     }
 }
 
-extension SearchPresenter: SearchInteractorOutputProtocol {
-    // TODO: implement interactor output methods
-}
+extension SearchPresenter: SearchInteractorOutputProtocol {}

@@ -17,7 +17,7 @@ protocol SearchPresenterProtocol: AnyObject {
     var interactor: SearchInteractorInputProtocol? { get set }
     var wireFrame: SearchWireFrameProtocol? { get set }
     
-    func viewDidLoad()
+    func searchItem(item: String)
 }
 
 protocol SearchInteractorOutputProtocol: AnyObject {

@@ -19,4 +19,38 @@ class Layout {
             ])
         }
     }
+    
+    class func center(view: UIView, in superview: UIView, relativeWidth: Bool = false, relativeHeight: Bool = false) {
+        centerYAnchor(of: view, in: superview, relativeHeight: relativeHeight)
+        centerXAnchor(of: view, in: superview, relativeWidth: relativeWidth)
+    }
+    
+    class func centerXAnchor(of view: UIView, in superview: UIView, relativeWidth: Bool = false) {
+        var constraintsToActivate: [NSLayoutConstraint] = [
+            view.centerXAnchor.constraint(equalTo: superview.centerXAnchor)
+        ]
+        if relativeWidth {
+            let width = superview.frame.width / 2
+            constraintsToActivate += [view.widthAnchor.constraint(equalToConstant: width)]
+        }
+
+        NSLayoutConstraint.activate(constraintsToActivate)
+    }
+
+    class func centerYAnchor(of view: UIView, in superview: UIView, relativeHeight: Bool = false) {
+        var constraintsToActivate: [NSLayoutConstraint] = [
+            view.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        ]
+        if relativeHeight {
+            let height = superview.frame.height / 2
+            constraintsToActivate += [view.heightAnchor.constraint(equalToConstant: height)]
+        }
+
+        NSLayoutConstraint.activate(constraintsToActivate)
+    }
+    
+    class func marginPin(of view: UIView, in superview: UIView, constant: CGFloat = .zero ) {
+        view.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: constant).isActive = true
+        view.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -constant).isActive = true
+    }
 }
