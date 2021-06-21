@@ -51,7 +51,6 @@ extension SearchDataSource: UITableViewDataSource {
 
         switch cellType {
         case .search:
-            tableView.separatorStyle = .none
             return 1
         case .items:
             guard let viewModel = view.viewModel else { return .zero }
