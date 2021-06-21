@@ -33,10 +33,8 @@
 		A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922C82676D3E700C967E0 /* UIViewExtension.swift */; };
 		A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425D2B3267816E500852F37 /* ItemSiteCell.swift */; };
 		A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425D2B4267816E500852F37 /* ItemSiteCell.xib */; };
-		A42EADFD267AD558001EFFFD /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */; };
 		A44B84A9267C2107005C348D /* SitesRemoteDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */; };
 		A44B84AD267C2154005C348D /* sites_404.json in Resources */ = {isa = PBXBuildFile; fileRef = A44B84AC267C2154005C348D /* sites_404.json */; };
-		A44B84AF267C225D005C348D /* Error+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84AE267C225D005C348D /* Error+Mock.swift */; };
 		A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */; };
 		A44B84B3267C24EA005C348D /* SitesInteractorOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */; };
 		A44B84B5267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */; };
@@ -62,7 +60,6 @@
 		A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A465B1F526781EAA00201B51 /* TitleSiteCell.xib */; };
 		A47463EA267D53F40099AD1E /* TestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463E9267D53F40099AD1E /* TestCase.swift */; };
 		A47463EC267D576A0099AD1E /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */; };
-		A47463EE267D58480099AD1E /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */; };
 		A47463F2267D60B70099AD1E /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47463F1267D60B70099AD1E /* AppDelegateTests.swift */; };
 		A49E9C1C267AAE5600422954 /* SitesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */; };
 		A49E9C1F267AB15B00422954 /* sites_200.json in Resources */ = {isa = PBXBuildFile; fileRef = A49E9C1E267AB15B00422954 /* sites_200.json */; };
@@ -72,7 +69,6 @@
 		A49E9C29267ACB9700422954 /* SitesViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C28267ACB9700422954 /* SitesViewMock.swift */; };
 		A49E9C2D267ACD5800422954 /* SitesWireFrameMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C2C267ACD5800422954 /* SitesWireFrameMock.swift */; };
 		A49E9C2F267ACE7600422954 /* SitesInteractorInputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */; };
-		A49E9C31267AD03500422954 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49E9C30267AD03500422954 /* Error.swift */; };
 		A4B234672680B3D200795264 /* search_empty_200.json in Resources */ = {isa = PBXBuildFile; fileRef = A4B234662680B3D200795264 /* search_empty_200.json */; };
 		A4B234692680B40200795264 /* SearchDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234682680B40200795264 /* SearchDelegateTests.swift */; };
 		A4B2346B2680BA4C00795264 /* SearchPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2346A2680BA4C00795264 /* SearchPresenterMock.swift */; };
@@ -88,6 +84,10 @@
 		A4B2347F2680DC1D00795264 /* SearchRemoteDataManagerOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2347E2680DC1D00795264 /* SearchRemoteDataManagerOutputMock.swift */; };
 		A4B234812680DC6700795264 /* SearchRemoteDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234802680DC6700795264 /* SearchRemoteDataManagerMock.swift */; };
 		A4B234872680E43400795264 /* SearchWireFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234862680E43400795264 /* SearchWireFrameTests.swift */; };
+		A4B2348F2680EF2000795264 /* ErrorSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B2348D2680EF2000795264 /* ErrorSiteCell.xib */; };
+		A4B234902680EF2000795264 /* ErrorSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */; };
+		A4B234922681188B00795264 /* SitesWireFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234912681188B00795264 /* SitesWireFrameTests.swift */; };
+		A4B2349426811D1B00795264 /* SitesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2349326811D1B00795264 /* SitesViewControllerTests.swift */; };
 		A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */; };
 		A4B93C89267F939C0045A1D4 /* ErrorSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */; };
 		A4B93C8A267F939C0045A1D4 /* ErrorSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */; };
@@ -158,10 +158,8 @@
 		A41922C82676D3E700C967E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A425D2B3267816E500852F37 /* ItemSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSiteCell.swift; sourceTree = "<group>"; };
 		A425D2B4267816E500852F37 /* ItemSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSiteCell.xib; sourceTree = "<group>"; };
-		A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerMock.swift; sourceTree = "<group>"; };
 		A44B84AC267C2154005C348D /* sites_404.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sites_404.json; sourceTree = "<group>"; };
-		A44B84AE267C225D005C348D /* Error+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Mock.swift"; sourceTree = "<group>"; };
 		A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManagerMock.swift; sourceTree = "<group>"; };
 		A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorOutputMock.swift; sourceTree = "<group>"; };
 		A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerOutputMock.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 		A465B1F526781EAA00201B51 /* TitleSiteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleSiteCell.xib; sourceTree = "<group>"; };
 		A47463E9267D53F40099AD1E /* TestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCase.swift; sourceTree = "<group>"; };
 		A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
-		A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
 		A47463F1267D60B70099AD1E /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesPresenterMock.swift; sourceTree = "<group>"; };
 		A49E9C1E267AB15B00422954 /* sites_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sites_200.json; sourceTree = "<group>"; };
@@ -197,7 +194,6 @@
 		A49E9C28267ACB9700422954 /* SitesViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewMock.swift; sourceTree = "<group>"; };
 		A49E9C2C267ACD5800422954 /* SitesWireFrameMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrameMock.swift; sourceTree = "<group>"; };
 		A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorInputMock.swift; sourceTree = "<group>"; };
-		A49E9C30267AD03500422954 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		A4B234662680B3D200795264 /* search_empty_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_empty_200.json; sourceTree = "<group>"; };
 		A4B234682680B40200795264 /* SearchDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegateTests.swift; sourceTree = "<group>"; };
 		A4B2346A2680BA4C00795264 /* SearchPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterMock.swift; sourceTree = "<group>"; };
@@ -213,6 +209,10 @@
 		A4B2347E2680DC1D00795264 /* SearchRemoteDataManagerOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteDataManagerOutputMock.swift; sourceTree = "<group>"; };
 		A4B234802680DC6700795264 /* SearchRemoteDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRemoteDataManagerMock.swift; sourceTree = "<group>"; };
 		A4B234862680E43400795264 /* SearchWireFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireFrameTests.swift; sourceTree = "<group>"; };
+		A4B2348D2680EF2000795264 /* ErrorSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorSiteCell.xib; sourceTree = "<group>"; };
+		A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSiteCell.swift; sourceTree = "<group>"; };
+		A4B234912681188B00795264 /* SitesWireFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrameTests.swift; sourceTree = "<group>"; };
+		A4B2349326811D1B00795264 /* SitesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewControllerTests.swift; sourceTree = "<group>"; };
 		A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSearchCell.swift; sourceTree = "<group>"; };
 		A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorSearchCell.xib; sourceTree = "<group>"; };
@@ -373,7 +373,6 @@
 			children = (
 				A41922AB26769C9D00C967E0 /* UIColorExtension.swift */,
 				A41922C82676D3E700C967E0 /* UIViewExtension.swift */,
-				A42EADFC267AD558001EFFFD /* UIViewControllerExtension.swift */,
 				A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
@@ -398,7 +397,6 @@
 			isa = PBXGroup;
 			children = (
 				A41922BC2676BD1B00C967E0 /* Site.swift */,
-				A49E9C30267AD03500422954 /* Error.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -440,6 +438,7 @@
 		A41922C52676D2C900C967E0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				A4B2348C2680EF2000795264 /* ErrorSiteCell */,
 				A465B1F126781E6B00201B51 /* TitleSiteCell */,
 				A425D2B2267816E500852F37 /* ItemSiteCell */,
 			);
@@ -582,7 +581,6 @@
 			isa = PBXGroup;
 			children = (
 				A47463EB267D576A0099AD1E /* UIViewExtensionTests.swift */,
-				A47463ED267D58480099AD1E /* UIViewControllerExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -591,7 +589,6 @@
 			isa = PBXGroup;
 			children = (
 				A49E9C1D267AB14300422954 /* JSON */,
-				A44B84AE267C225D005C348D /* Error+Mock.swift */,
 				A49E9C22267AB1E500422954 /* Site+Mock.swift */,
 				A49E9C2E267ACE7600422954 /* SitesInteractorInputMock.swift */,
 				A49E9C1B267AAE5600422954 /* SitesPresenterMock.swift */,
@@ -613,6 +610,15 @@
 				A44B84AC267C2154005C348D /* sites_404.json */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		A4B2348C2680EF2000795264 /* ErrorSiteCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4B2348D2680EF2000795264 /* ErrorSiteCell.xib */,
+				A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */,
+			);
+			path = ErrorSiteCell;
 			sourceTree = "<group>";
 		};
 		A4B93C86267F937E0045A1D4 /* ErrorSearchCell */ = {
@@ -658,7 +664,6 @@
 			children = (
 				A4B93C94268026270045A1D4 /* Mapper */,
 				A4B2347A2680DAE800795264 /* SearchInteractorTests.swift */,
-				A4B2347E2680DC1D00795264 /* SearchRemoteDataManagerOutputMock.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -666,6 +671,7 @@
 		A4B93C91268025DD0045A1D4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A4B2347E2680DC1D00795264 /* SearchRemoteDataManagerOutputMock.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -721,6 +727,7 @@
 				A4B93C8F268022690045A1D4 /* Domain */,
 				A49E9C1A267AAE3400422954 /* Mocks */,
 				A4C7589D267977F3001343B9 /* Presentation */,
+				A4B234912681188B00795264 /* SitesWireFrameTests.swift */,
 			);
 			path = SitesModule;
 			sourceTree = "<group>";
@@ -739,6 +746,7 @@
 				A4C7589E26797A8F001343B9 /* SitesDataSourceTests.swift */,
 				A4C758A026797AA8001343B9 /* SitesDelegateTests.swift */,
 				A4C758AD26797B59001343B9 /* SitesPresenterTests.swift */,
+				A4B2349326811D1B00795264 /* SitesViewControllerTests.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -860,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4654124267EB780009E1730 /* SearchCell.xib in Resources */,
+				A4B2348F2680EF2000795264 /* ErrorSiteCell.xib in Resources */,
 				A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */,
 				A465412A267EC9E1009E1730 /* ItemSearchCell.xib in Resources */,
 				A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */,
@@ -1003,7 +1012,6 @@
 				A465410C267E9A0A009E1730 /* SearchViewConstants.swift in Sources */,
 				A41922AF26769E7500C967E0 /* SitesDataSource.swift in Sources */,
 				A46540FE267E696D009E1730 /* SearchInteractor.swift in Sources */,
-				A42EADFD267AD558001EFFFD /* UIViewControllerExtension.swift in Sources */,
 				A41922C02676BEBB00C967E0 /* SiteMapper.swift in Sources */,
 				A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */,
 				A465410A267E72C9009E1730 /* Endpoint.swift in Sources */,
@@ -1023,7 +1031,6 @@
 				A46540FB267E696D009E1730 /* SearchPresenter.swift in Sources */,
 				A46540FD267E696D009E1730 /* SearchProtocols.swift in Sources */,
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
-				A49E9C31267AD03500422954 /* Error.swift in Sources */,
 				A4654115267EA901009E1730 /* SearchMapper.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
 				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
@@ -1038,6 +1045,7 @@
 				A41922BD2676BD1B00C967E0 /* Site.swift in Sources */,
 				A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */,
 				A4654100267E696D009E1730 /* SearchRemoteDataManager.swift in Sources */,
+				A4B234902680EF2000795264 /* ErrorSiteCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,20 +1064,20 @@
 				A4B2347D2680DBAF00795264 /* SearchInteractorOutputMock.swift in Sources */,
 				A4C758AC26797B2E001343B9 /* SiteMapperTests.swift in Sources */,
 				A4B234732680CBAA00795264 /* SearchInteractorInputMock.swift in Sources */,
-				A47463EE267D58480099AD1E /* UIViewControllerExtensionTests.swift in Sources */,
 				A47463EC267D576A0099AD1E /* UIViewExtensionTests.swift in Sources */,
 				A4B2346F2680CA8600795264 /* SearchPresenterTests.swift in Sources */,
 				A49E9C2F267ACE7600422954 /* SitesInteractorInputMock.swift in Sources */,
 				A4C758A526797AD2001343B9 /* SitesInteractorTests.swift in Sources */,
 				A4B93C98268027150045A1D4 /* Search+Mock.swift in Sources */,
+				A4B234922681188B00795264 /* SitesWireFrameTests.swift in Sources */,
 				A4B2347B2680DAE800795264 /* SearchInteractorTests.swift in Sources */,
 				A44B84B5267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift in Sources */,
+				A4B2349426811D1B00795264 /* SitesViewControllerTests.swift in Sources */,
 				A49E9C23267AB1E500422954 /* Site+Mock.swift in Sources */,
 				A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */,
 				A44B84A9267C2107005C348D /* SitesRemoteDataManagerMock.swift in Sources */,
 				A47463F2267D60B70099AD1E /* AppDelegateTests.swift in Sources */,
 				A49E9C2D267ACD5800422954 /* SitesWireFrameMock.swift in Sources */,
-				A44B84AF267C225D005C348D /* Error+Mock.swift in Sources */,
 				A4B234792680CF3B00795264 /* DispatchQueueMock.swift in Sources */,
 				A4B93C8D268019BF0045A1D4 /* LayoutTests.swift in Sources */,
 				A4C758AE26797B59001343B9 /* SitesPresenterTests.swift in Sources */,

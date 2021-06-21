@@ -32,7 +32,7 @@ class SitesPresenterTests: XCTestCase {
 
         XCTAssertTrue(interactor.getSitesCalled)
         XCTAssertTrue(view.hideTableViewCalled)
-        XCTAssertTrue(view.hideRetryButtonCalled)
+        XCTAssertTrue(view.loadActivityCalled)
     }
     
     func testSiteSelectedSuccess() {
@@ -44,12 +44,11 @@ class SitesPresenterTests: XCTestCase {
     }
 
     func testInteractorErrorDataPresenter(){
-        let viewModel = try! Error.mocked()
-        sut.interactorErrorDataPresenter(statusCode: 404, error: viewModel)
+        sut.interactorErrorDataPresenter()
         
         XCTAssertTrue(view.stopAndHideActivityCalled)
-        XCTAssertTrue(view.showMessageErrorCalled)
-        XCTAssertTrue(view.hideRetryButtonCalled)
+        XCTAssertTrue(view.presenterErrorViewCalled)
+        XCTAssertTrue(view.hideTableViewCalled)
     }
     
     func testInteractorPushDataPresenter() {

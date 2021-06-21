@@ -9,7 +9,7 @@ class SitesRemoteDataManagerOutputMock: SitesRemoteDataManagerOutputProtocol {
         returnDataCalled = true
     }
 
-    func errorData(statusCode: Int, error: Error) {
+    func errorData() {
         errorDataCalled = true
     }
     

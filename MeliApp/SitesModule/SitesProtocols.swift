@@ -8,8 +8,7 @@ protocol SitesViewProtocol: AnyObject {
     func loadActivity()
     func stopAndHideActivity()
     func hideTableView(isHide: Bool)
-    func hideRetryButton(isHide: Bool)
-    func showMessageError(message: String)
+    func presenterErrorView()
 }
 
 protocol SitesWireFrameProtocol: AnyObject {
@@ -31,7 +30,7 @@ protocol SitesPresenterProtocol: AnyObject {
 protocol SitesInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
     func interactorPushDataPresenter(receivedData: [SiteViewModel])
-    func interactorErrorDataPresenter(statusCode: Int, error: Error)
+    func interactorErrorDataPresenter()
 }
 
 protocol SitesInteractorInputProtocol: AnyObject {
@@ -42,10 +41,6 @@ protocol SitesInteractorInputProtocol: AnyObject {
     
     func getSites()
     func siteSelected(idSide: String)
-}
-
-protocol SitesDataManagerInputProtocol: AnyObject {
-    // INTERACTOR -> DATAMANAGER
 }
 
 protocol SitesRemoteDataManagerInputProtocol: AnyObject {
@@ -59,10 +54,11 @@ protocol SitesRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
     
     func returnData(sites: [Site])
-    func errorData(statusCode: Int, error: Error)
+    func errorData()
 }
 
 protocol SitesLocalDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> LOCALDATAMANAGER
     func internalSaveSite(idSite: String)
+    func getSiteSaved() -> String?
 }

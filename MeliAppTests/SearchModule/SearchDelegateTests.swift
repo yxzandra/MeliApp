@@ -21,11 +21,11 @@ class SearchDelegateTests: XCTestCase {
     }
     
     override func tearDown() {
-        super.tearDown()
         tableView = nil
         viewController = nil
         sut = nil
         presenter = nil
+        super.tearDown()
     }
     
     func testDidSelectRowRoutesWhenAppropiate() {

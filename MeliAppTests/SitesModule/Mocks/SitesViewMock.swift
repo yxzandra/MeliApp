@@ -7,8 +7,7 @@ class SitesViewMock: SitesViewProtocol {
     var loadActivityCalled = false
     var stopAndHideActivityCalled = false
     var hideTableViewCalled = false
-    var showMessageErrorCalled = false
-    var hideRetryButtonCalled = false
+    var presenterErrorViewCalled = false
     
     func presenterPushDataView(receivedData: [SiteViewModel]) {
         presenterPushDataViewCalled = true
@@ -26,12 +25,7 @@ class SitesViewMock: SitesViewProtocol {
         hideTableViewCalled = true
     }
 
-    func showMessageError(message: String) {
-        showMessageErrorCalled = true
+    func presenterErrorView() {
+        presenterErrorViewCalled = true
     }
-
-    func hideRetryButton(isHide: Bool) {
-        hideRetryButtonCalled = true
-    }
-
 }
