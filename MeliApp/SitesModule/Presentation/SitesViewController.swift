@@ -4,15 +4,17 @@ class SitesViewController: UIViewController {
     typealias Constants = SitesViewConstants
     internal var presenter: SitesPresenterProtocol?
     
-    private let loadIndicatorView = UIActivityIndicatorView(style: .large)
-    private let tableView = UITableView()
-    private let retryButton = UIButton()
+    private var mainDispatchQueue: DispatchQueue?
     private var delegate: SitesDelegate?
     private var dataSource: SitesDataSource?
     
+    let tableView = UITableView()
+    let loadIndicatorView = UIActivityIndicatorView(style: .large)
     var viewModel: [SiteViewModel]?
+    var showError: Bool = false
     
     convenience init(
+        mainDispatchQueue: DispatchQueue = DispatchQueue.main,
         dataSource: SitesDataSource,
         delegate: SitesDelegate,
         presenter: SitesPresenterProtocol
@@ -22,7 +24,11 @@ class SitesViewController: UIViewController {
         delegate.viewController = self
         self.dataSource = dataSource
         self.delegate = delegate
+        self.presenter = presenter
+        self.mainDispatchQueue = mainDispatchQueue
     }
+
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +36,6 @@ class SitesViewController: UIViewController {
         prepareTableView()
         registerCells()
         prepareActivityIndicator()
-        prepareRetryButton()
         presenter?.viewDidLoad()
     }
 
@@ -56,8 +61,9 @@ class SitesViewController: UIViewController {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: Constants.nibTitleSiteCell, bundle: nil), forCellReuseIdentifier: Constants.nibTitleSiteCell)
-        tableView.register(UINib(nibName: Constants.nibItemSiteCell, bundle: nil), forCellReuseIdentifier: Constants.nibItemSiteCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibTitleSiteCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibTitleSiteCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibItemSiteCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibItemSiteCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibErrorSiteCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibErrorSiteCell)
     }
     
     private func prepareActivityIndicator() {
@@ -67,55 +73,36 @@ class SitesViewController: UIViewController {
         
         Layout.center(view: loadIndicatorView, in: self.view)
     }
-    
-    private func prepareRetryButton() {
-        self.retryButton.isHidden = true
-        self.retryButton.center = self.view.center
-        self.retryButton.setTitle(Constants.titleRetryButton, for: .normal)
-        self.retryButton.setTitleColor(.titleColor, for: .normal)
-        self.retryButton.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.retryButton)
-        Layout.center(view: retryButton, in: self.view)
-        
-        self.retryButton.addTarget(self, action: #selector(retryTouchUpInside), for: .touchUpInside)
-    }
-    
-    @objc func retryTouchUpInside() {
-        presenter?.viewDidLoad()
-    }
 }
 
 extension SitesViewController: SitesViewProtocol {
-    func showMessageError(message: String) {
-        self.showToast(message: message, seconds: 5.0)
+    func presenterErrorView() {
+        showError = true
+        viewModel = nil
+        self.tableView.reloadData()
     }
     
     func hideTableView(isHide: Bool) {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.tableView.isHidden = isHide
         }
     }
     
-    func hideRetryButton(isHide: Bool) {
-        DispatchQueue.main.async {
-            self.retryButton.isHidden = isHide
-        }
-    }
-    
     func loadActivity() {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.loadIndicatorView.startAnimating()
         }
     }
 
     func stopAndHideActivity() {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.loadIndicatorView.stopAnimating()
             self.loadIndicatorView.hidesWhenStopped = true
         }
     }
     
     func presenterPushDataView(receivedData: [SiteViewModel]) {
+        self.showError = false
         self.viewModel = receivedData
         tableView.reloadData()
     }

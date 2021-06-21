@@ -1,20 +1,20 @@
 import XCTest
 @testable import MeliApp
 
-class SearchViewControllerTests: XCTestCase {
-    var sut: SearchViewController!
+class SitesViewControllerTests: XCTestCase {
+    var sut: SitesViewController!
     var dispatch: DispatchQueue!
-    var presenter: SearchPresenterMock!
-    var dataSource: SearchDataSource!
-    var delegate: SearchDelegate!
+    var presenter: SitesPresenterMock!
+    var dataSource: SitesDataSource!
+    var delegate: SitesDelegate!
     
     override func setUp() {
         super.setUp()
         dispatch = DispatchQueueMock(label: "")
-        presenter = SearchPresenterMock()
-        dataSource = SearchDataSource()
-        delegate = SearchDelegate()
-        sut = SearchViewController(
+        presenter = SitesPresenterMock()
+        dataSource = SitesDataSource()
+        delegate = SitesDelegate()
+        sut = SitesViewController(
             mainDispatchQueue: dispatch,
             dataSource: dataSource,
             delegate: delegate,
@@ -37,7 +37,7 @@ class SearchViewControllerTests: XCTestCase {
         XCTAssertTrue(presenter.viewDidLoadCalled)
         
         XCTAssertEqual(sut.view.backgroundColor, .backgroundColor)
-        XCTAssertEqual(sut.navigationItem.title, "Busca tu artículo")
+        XCTAssertEqual(sut.navigationItem.title, "Paises Asociados")
         
         XCTAssertNotNil(sut.tableView.dataSource)
         XCTAssertNotNil(sut.tableView.delegate)
@@ -51,16 +51,9 @@ class SearchViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.showError)
         XCTAssertNil(sut.viewModel)
     }
-
-    func testpresenterPushDataViewWithViewModelNil() {
-        sut.presenterPushDataView(receivedData: nil)
-
-        XCTAssertFalse(sut.showError)
-        XCTAssertNil(sut.viewModel)
-    }
     
     func testpresenterPushDataViewSuccess() {
-        let viewModel = SearchViewModel.mocked()
+        let viewModel = SiteViewModel.mocked()
         sut.presenterPushDataView(receivedData: viewModel)
 
         XCTAssertFalse(sut.showError)
@@ -109,3 +102,4 @@ class SearchViewControllerTests: XCTestCase {
         self.waitForExpectations(timeout: 4, handler: nil)
     }
 }
+

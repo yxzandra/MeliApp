@@ -1,6 +1,7 @@
 import Foundation
 
-class SitesInteractor: SitesInteractorInputProtocol {
+
+class SitesInteractor: NSObject {
     weak var presenter: SitesInteractorOutputProtocol?
     var localDatamanager: SitesLocalDataManagerInputProtocol?
     var remoteDatamanager: SitesRemoteDataManagerInputProtocol?
@@ -17,6 +18,18 @@ class SitesInteractor: SitesInteractorInputProtocol {
         self.remoteDatamanager = remoteDatamanager
     }
     
+    private func sortSites(siteList: [SiteViewModel]) -> [SiteViewModel] {
+        if let idSite = localDatamanager?.getSiteSaved(), let index = siteList.firstIndex(where: {$0.id == idSite}) {
+            var siteListResult = siteList
+            let element = siteListResult.remove(at: index)
+            siteListResult.insert(element, at: 0)
+            return siteListResult
+        }
+        return siteList
+    }
+}
+
+extension SitesInteractor: SitesInteractorInputProtocol {
     func getSites() {
         remoteDatamanager?.externalGetData()
     }
@@ -27,12 +40,13 @@ class SitesInteractor: SitesInteractorInputProtocol {
 }
 
 extension SitesInteractor: SitesRemoteDataManagerOutputProtocol {
-    func errorData(statusCode: Int, error: Error) {
-        presenter?.interactorErrorDataPresenter(statusCode: statusCode, error: error)
+    func errorData() {
+        presenter?.interactorErrorDataPresenter()
     }
     
     func returnData(sites: [Site]) {
         let viewModel = mapper.reverseMap(values: sites)
-        presenter?.interactorPushDataPresenter(receivedData: viewModel)
+        let viewModelSorted = sortSites(siteList: viewModel)
+        presenter?.interactorPushDataPresenter(receivedData: viewModelSorted)
     }
 }

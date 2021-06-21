@@ -52,10 +52,10 @@ class SitesInteractorTests: XCTestCase {
         XCTAssertTrue(localDatamanager.internalSaveSiteCalled)
     }
     
-    func testErrorDataCalled() {
-        let error = try! Error.mocked()
-        sut.errorData(statusCode: 404, error: error)
+    func testPresenterErrorDataCalled() {
+        sut.errorData()
         XCTAssertTrue(presenter.interactorErrorDataPresenterCalled)
+        XCTAssertFalse(presenter.interactorPushDataPresenterCalled)
     }
     
     func testReturnDataCalled() {

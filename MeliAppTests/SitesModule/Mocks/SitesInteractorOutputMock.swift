@@ -9,7 +9,7 @@ class SitesInteractorOutputMock: SitesInteractorOutputProtocol {
         interactorPushDataPresenterCalled = true
     }
     
-    func interactorErrorDataPresenter(statusCode: Int, error: Error) {
+    func interactorErrorDataPresenter() {
         interactorErrorDataPresenterCalled = true
     }
 }

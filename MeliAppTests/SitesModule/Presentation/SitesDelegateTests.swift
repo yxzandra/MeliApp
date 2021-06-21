@@ -21,16 +21,16 @@ class SitesDelegateTests: XCTestCase {
     }
     
     override func tearDown() {
-        super.tearDown()
         tableView = nil
         viewController = nil
         sut = nil
         presenter = nil
+        super.tearDown()
     }
     
-    func testDidSelectRowRoutesWhenAppropiate() {
-        let cellTypes = SitesCellTypes.default
+    func testDidSelectRowRoutesWhenViewModelNotNil() {
         let viewModel = SiteViewModel.mocked()
+        let cellTypes = SitesCellTypes.filteredCellTypes(viewModel: viewModel, showError: false)
         sut.viewController?.presenterPushDataView(receivedData: viewModel)
 
         for segmentIndex in 0 ..< cellTypes.count {
@@ -38,21 +38,34 @@ class SitesDelegateTests: XCTestCase {
             let cellSection = cellTypes[segmentIndex]
             switch cellSection {
             case .header:
-                sut.tableView(tableView, didSelectRowAt: indexPath)
-                XCTAssertFalse(presenter.siteSelectedCalled)
+                break
             case .sites:
                 sut.tableView(tableView, didSelectRowAt: indexPath)
                 XCTAssertTrue(presenter.siteSelectedCalled)
+            case .error:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(presenter.viewDidLoadCalled)
             }
         }
     }
-    
-    func testDidSelectRowRoutesWhenViewModelNil() {
-        for segmentIndex in 0 ..< SitesCellTypes.default.count {
+
+    func testDidSelectRowRoutesWhenErrorIsTrue() {
+        let cellTypes = SitesCellTypes.filteredCellTypes(viewModel: nil, showError: true)
+        sut.viewController?.presenterErrorView()
+
+        for segmentIndex in 0 ..< cellTypes.count {
             let indexPath = IndexPath(row: .zero, section: segmentIndex)
-            sut.tableView(tableView, didSelectRowAt: indexPath)
-            XCTAssertFalse(presenter.siteSelectedCalled)
+            let cellSection = cellTypes[segmentIndex]
+            switch cellSection {
+            case .header:
+                break
+            case .sites:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(presenter.siteSelectedCalled)
+            case .error:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(presenter.viewDidLoadCalled)
+            }
         }
     }
-    
 }

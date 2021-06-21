@@ -22,7 +22,6 @@ extension SitesPresenter: SitesPresenterProtocol {
     func viewDidLoad() {
         view?.loadActivity()
         view?.hideTableView(isHide: true)
-        view?.hideRetryButton(isHide: true)
         interactor?.getSites()
     }
     
@@ -33,16 +32,10 @@ extension SitesPresenter: SitesPresenterProtocol {
 }
 
 extension SitesPresenter: SitesInteractorOutputProtocol {
-    func interactorErrorDataPresenter(statusCode: Int, error: Error) {
-        let message = String(
-            format: SitesViewConstants.formatError,
-            error.error,
-            statusCode,
-            error.message
-        )
+    func interactorErrorDataPresenter() {
         view?.stopAndHideActivity()
-        view?.showMessageError(message: message)
-        view?.hideRetryButton(isHide: false)
+        view?.hideTableView(isHide: false)
+        view?.presenterErrorView()
     }
     
     func interactorPushDataPresenter(receivedData: [SiteViewModel]) {
