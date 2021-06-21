@@ -88,6 +88,16 @@
 		A4B234902680EF2000795264 /* ErrorSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */; };
 		A4B234922681188B00795264 /* SitesWireFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234912681188B00795264 /* SitesWireFrameTests.swift */; };
 		A4B2349426811D1B00795264 /* SitesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B2349326811D1B00795264 /* SitesViewControllerTests.swift */; };
+		A4B234AC2681268900795264 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234A52681268900795264 /* DetailPresenter.swift */; };
+		A4B234AE2681268900795264 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234A72681268900795264 /* DetailProtocols.swift */; };
+		A4B234AF2681268900795264 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234A82681268900795264 /* DetailInteractor.swift */; };
+		A4B234B02681268900795264 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234A92681268900795264 /* DetailViewController.swift */; };
+		A4B234B12681268900795264 /* DetailRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234AA2681268900795264 /* DetailRemoteDataManager.swift */; };
+		A4B234B22681268900795264 /* DetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234AB2681268900795264 /* DetailWireFrame.swift */; };
+		A4B234B72681278C00795264 /* DetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234B62681278C00795264 /* DetailDataSource.swift */; };
+		A4B234B92681279A00795264 /* DetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234B82681279A00795264 /* DetailDelegate.swift */; };
+		A4B234BB2681285900795264 /* DetailCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234BA2681285900795264 /* DetailCellTypes.swift */; };
+		A4B234BD268128B300795264 /* DetailViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234BC268128B300795264 /* DetailViewConstants.swift */; };
 		A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */; };
 		A4B93C89267F939C0045A1D4 /* ErrorSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */; };
 		A4B93C8A267F939C0045A1D4 /* ErrorSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */; };
@@ -213,6 +223,16 @@
 		A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorSiteCell.swift; sourceTree = "<group>"; };
 		A4B234912681188B00795264 /* SitesWireFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesWireFrameTests.swift; sourceTree = "<group>"; };
 		A4B2349326811D1B00795264 /* SitesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesViewControllerTests.swift; sourceTree = "<group>"; };
+		A4B234A52681268900795264 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		A4B234A72681268900795264 /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		A4B234A82681268900795264 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		A4B234A92681268900795264 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A4B234AA2681268900795264 /* DetailRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRemoteDataManager.swift; sourceTree = "<group>"; };
+		A4B234AB2681268900795264 /* DetailWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWireFrame.swift; sourceTree = "<group>"; };
+		A4B234B62681278C00795264 /* DetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataSource.swift; sourceTree = "<group>"; };
+		A4B234B82681279A00795264 /* DetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDelegate.swift; sourceTree = "<group>"; };
+		A4B234BA2681285900795264 /* DetailCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellTypes.swift; sourceTree = "<group>"; };
+		A4B234BC268128B300795264 /* DetailViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewConstants.swift; sourceTree = "<group>"; };
 		A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSearchCell.swift; sourceTree = "<group>"; };
 		A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorSearchCell.xib; sourceTree = "<group>"; };
@@ -317,6 +337,7 @@
 				A4654108267E72B2009E1730 /* NetworkConfiguration */,
 				A41922A22676887900C967E0 /* SitesModule */,
 				A46540F3267E694A009E1730 /* SearchModule */,
+				A4B234A42681267200795264 /* DetailModule */,
 			);
 			path = MeliApp;
 			sourceTree = "<group>";
@@ -459,9 +480,9 @@
 			children = (
 				A4654102267E6994009E1730 /* Data */,
 				A4654105267E6C7A009E1730 /* Domain */,
+				A4654103267E699D009E1730 /* Presentation */,
 				A46540F6267E696D009E1730 /* SearchProtocols.swift */,
 				A46540FA267E696D009E1730 /* SearchWireFrame.swift */,
-				A4654103267E699D009E1730 /* View */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -475,7 +496,7 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		A4654103267E699D009E1730 /* View */ = {
+		A4654103267E699D009E1730 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				A465411E267EB72D009E1730 /* Cell */,
@@ -487,7 +508,7 @@
 				A465410B267E9A0A009E1730 /* SearchViewConstants.swift */,
 				A46540F8267E696D009E1730 /* SearchViewController.swift */,
 			);
-			path = View;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		A4654104267E6A23009E1730 /* Domain */ = {
@@ -619,6 +640,47 @@
 				A4B2348E2680EF2000795264 /* ErrorSiteCell.swift */,
 			);
 			path = ErrorSiteCell;
+			sourceTree = "<group>";
+		};
+		A4B234A42681267200795264 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234B32681272F00795264 /* Data */,
+				A4B234B42681273500795264 /* Domain */,
+				A4B234B52681274400795264 /* Presentation */,
+				A4B234A72681268900795264 /* DetailProtocols.swift */,
+				A4B234AB2681268900795264 /* DetailWireFrame.swift */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		A4B234B32681272F00795264 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234AA2681268900795264 /* DetailRemoteDataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A4B234B42681273500795264 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234A82681268900795264 /* DetailInteractor.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A4B234B52681274400795264 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234A52681268900795264 /* DetailPresenter.swift */,
+				A4B234A92681268900795264 /* DetailViewController.swift */,
+				A4B234B62681278C00795264 /* DetailDataSource.swift */,
+				A4B234B82681279A00795264 /* DetailDelegate.swift */,
+				A4B234BA2681285900795264 /* DetailCellTypes.swift */,
+				A4B234BC268128B300795264 /* DetailViewConstants.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		A4B93C86267F937E0045A1D4 /* ErrorSearchCell */ = {
@@ -1015,24 +1077,32 @@
 				A41922C02676BEBB00C967E0 /* SiteMapper.swift in Sources */,
 				A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */,
 				A465410A267E72C9009E1730 /* Endpoint.swift in Sources */,
+				A4B234B22681268900795264 /* DetailWireFrame.swift in Sources */,
 				A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */,
 				A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */,
 				A4654129267EC9E1009E1730 /* ItemSearchCell.swift in Sources */,
 				A41922A02676886300C967E0 /* SitesRemoteDataManager.swift in Sources */,
+				A4B234B72681278C00795264 /* DetailDataSource.swift in Sources */,
 				A4654123267EB780009E1730 /* SearchCell.swift in Sources */,
 				A465411D267EB71F009E1730 /* SearchCellTypes.swift in Sources */,
 				A41922652676873200C967E0 /* AppDelegate.swift in Sources */,
 				A4654112267EA83F009E1730 /* SearchViewModel.swift in Sources */,
 				A41922672676873200C967E0 /* SceneDelegate.swift in Sources */,
+				A4B234B92681279A00795264 /* DetailDelegate.swift in Sources */,
+				A4B234BD268128B300795264 /* DetailViewConstants.swift in Sources */,
 				A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */,
 				A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */,
 				A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */,
+				A4B234AC2681268900795264 /* DetailPresenter.swift in Sources */,
+				A4B234AF2681268900795264 /* DetailInteractor.swift in Sources */,
 				A419229F2676886300C967E0 /* SitesViewController.swift in Sources */,
 				A46540FB267E696D009E1730 /* SearchPresenter.swift in Sources */,
 				A46540FD267E696D009E1730 /* SearchProtocols.swift in Sources */,
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
+				A4B234B02681268900795264 /* DetailViewController.swift in Sources */,
 				A4654115267EA901009E1730 /* SearchMapper.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
+				A4B234AE2681268900795264 /* DetailProtocols.swift in Sources */,
 				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
 				A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */,
 				A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */,
@@ -1041,6 +1111,8 @@
 				A46540FF267E696D009E1730 /* SearchViewController.swift in Sources */,
 				A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */,
 				A465411B267EB704009E1730 /* SearchDelegate.swift in Sources */,
+				A4B234B12681268900795264 /* DetailRemoteDataManager.swift in Sources */,
+				A4B234BB2681285900795264 /* DetailCellTypes.swift in Sources */,
 				A4B93C89267F939C0045A1D4 /* ErrorSearchCell.swift in Sources */,
 				A41922BD2676BD1B00C967E0 /* Site.swift in Sources */,
 				A419229E2676886300C967E0 /* SitesInteractor.swift in Sources */,

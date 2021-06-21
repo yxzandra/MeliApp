@@ -8,7 +8,6 @@ enum SearchViewConstants {
     static let sinInteres = "sin interés"
     
     enum SearchCell {
-        // MARK: SearchCell
         static let placeholderTextField = "Buscar en Mercado Libre"
         static let titleSearchButton = "Buscar"
         static let marginSearch = CGFloat(20)
