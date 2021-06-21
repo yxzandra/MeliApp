@@ -32,6 +32,10 @@ extension SearchPresenter: SearchPresenterProtocol {
         view?.hideTableView(isHide: true)
         interactor?.searchItem(item: item, idSite: idSite)
     }
+    
+    func itemSelected(idItem: String) {
+        wireFrame?.presentViewDetail(from: view!, idItem: idItem)
+    }
 }
 
 extension SearchPresenter: SearchInteractorOutputProtocol {

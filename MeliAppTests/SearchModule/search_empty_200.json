@@ -1,0 +1,28 @@
+{
+    "site_id": "MLM",
+    "paging": {
+        "total": 0,
+        "primary_results": 1000,
+        "offset": 50,
+        "limit": 50
+    },
+    "results": [],
+    "secondary_results": [],
+    "related_results": [],
+    "sort": {
+        "id": "relevance",
+        "name": "Más relevantes"
+    },
+    "available_sorts": [
+        {
+            "id": "price_asc",
+            "name": "Menor precio"
+        },
+        {
+            "id": "price_desc",
+            "name": "Mayor precio"
+        }
+    ],
+    "filters": [],
+    "available_filters": []
+}

@@ -3,18 +3,15 @@ import Foundation
 class SearchInteractor: SearchInteractorInputProtocol {
     // MARK: Properties
     weak var presenter: SearchInteractorOutputProtocol?
-    var localDatamanager: SearchLocalDataManagerInputProtocol?
     var remoteDatamanager: SearchRemoteDataManagerInputProtocol?
     let mapper = SearchMapper()
     
     convenience init(
         presenter: SearchInteractorOutputProtocol,
-        localDatamanager: SearchLocalDataManagerInputProtocol,
         remoteDatamanager: SearchRemoteDataManagerInputProtocol
     ) {
         self.init()
         self.presenter = presenter
-        self.localDatamanager = localDatamanager
         self.remoteDatamanager = remoteDatamanager
     }
 

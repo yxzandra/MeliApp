@@ -14,6 +14,7 @@ protocol SearchViewProtocol: AnyObject {
 protocol SearchWireFrameProtocol: AnyObject {
     // PRESENTER -> WIREFRAME
     static func createSearchModule(with data: String) -> UIViewController
+    func presentViewDetail(from view: SearchViewProtocol, idItem: String)
 }
 
 protocol SearchPresenterProtocol: AnyObject {
@@ -24,6 +25,7 @@ protocol SearchPresenterProtocol: AnyObject {
     
     func viewDidLoad(idSite: String)
     func searchItem(item: String)
+    func itemSelected(idItem: String)
 }
 
 protocol SearchInteractorOutputProtocol: AnyObject {
@@ -35,7 +37,6 @@ protocol SearchInteractorOutputProtocol: AnyObject {
 protocol SearchInteractorInputProtocol: AnyObject {
     // PRESENTER -> INTERACTOR
     var presenter: SearchInteractorOutputProtocol? { get set }
-    var localDatamanager: SearchLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: SearchRemoteDataManagerInputProtocol? { get set }
     
     func searchItem(item: String, idSite: String)
@@ -55,8 +56,4 @@ protocol SearchRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
     func returnData(data: Search)
     func errorData()
-}
-
-protocol SearchLocalDataManagerInputProtocol: AnyObject {
-    // INTERACTOR -> LOCALDATAMANAGER
 }

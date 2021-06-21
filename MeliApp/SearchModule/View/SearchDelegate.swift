@@ -12,8 +12,7 @@ extension SearchDelegate: UITableViewDelegate {
             break
         case .items:
             guard let itemSelected = viewController?.viewModel?[indexPath.row] else { return }
-            print("item Seleccionado", itemSelected.title)
-            //viewController?.presenter?.itemSelected(site: siteSelected)
+            viewController?.presenter?.itemSelected(idItem: itemSelected.id)
         }
     }
 }

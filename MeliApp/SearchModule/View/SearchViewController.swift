@@ -5,16 +5,18 @@ class SearchViewController: UIViewController {
     typealias Constants = SearchViewConstants
     internal var presenter: SearchPresenterProtocol?
     
-    private let loadIndicatorView = UIActivityIndicatorView(style: .large)
-    private let tableView = UITableView()
+    private var mainDispatchQueue: DispatchQueue?
     private var delegate: SearchDelegate?
     private var dataSource: SearchDataSource?
     
+    let loadIndicatorView = UIActivityIndicatorView(style: .large)
+    let tableView = UITableView()
     var idSite = String()
     var viewModel: [SearchViewModel]?
     var showError: Bool = false
     
     convenience init(
+        mainDispatchQueue: DispatchQueue = DispatchQueue.main,
         dataSource: SearchDataSource,
         delegate: SearchDelegate,
         presenter: SearchPresenterProtocol
@@ -25,6 +27,7 @@ class SearchViewController: UIViewController {
         self.dataSource = dataSource
         self.delegate = delegate
         self.presenter = presenter
+        self.mainDispatchQueue = mainDispatchQueue
     }
     
     // MARK: Lifecycle
@@ -88,19 +91,19 @@ extension SearchViewController: SearchViewProtocol {
     }
     
     func hideTableView(isHide: Bool) {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.tableView.isHidden = isHide
         }
     }
     
     func loadActivity() {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.loadIndicatorView.startAnimating()
         }
     }
 
     func stopAndHideActivity() {
-        DispatchQueue.main.async {
+        mainDispatchQueue?.async {
             self.loadIndicatorView.stopAnimating()
             self.loadIndicatorView.hidesWhenStopped = true
         }

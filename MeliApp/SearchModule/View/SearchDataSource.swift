@@ -46,6 +46,7 @@ extension SearchDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let view = viewController else { return .zero }
         let cellType = cellTypes[section]
 
         switch cellType {
@@ -53,14 +54,14 @@ extension SearchDataSource: UITableViewDataSource {
             tableView.separatorStyle = .none
             return 1
         case .items:
-            guard let viewModel = viewController?.viewModel else { return .zero }
+            guard let viewModel = view.viewModel else { return .zero }
             tableView.separatorStyle = .singleLine
             tableView.separatorInset = .zero
             return viewModel.count
         case .error:
-            guard ((viewController?.showError) != nil) else { return .zero }
+            guard view.showError else { return .zero }
             tableView.separatorStyle = .none
-        return 1
+            return 1
         }
     }
     
@@ -80,7 +81,6 @@ extension SearchDataSource: UITableViewDataSource {
             }
             cell = prepareItem(viewModel, tableView, indexPath)
         case .error:
-            guard (viewController?.showError) != nil else { return UITableViewCell() }
             cell = prepareError(tableView, indexPath)
         }
         cell.selectionStyle = .none
