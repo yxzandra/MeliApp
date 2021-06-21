@@ -5,10 +5,10 @@ class SitesViewController: UIViewController {
     internal var presenter: SitesPresenterProtocol?
     
     private let loadIndicatorView = UIActivityIndicatorView(style: .large)
-    private var delegate: SitesDelegate?
-    private var dataSource: SitesDataSource?
     private let tableView = UITableView()
     private let retryButton = UIButton()
+    private var delegate: SitesDelegate?
+    private var dataSource: SitesDataSource?
     
     var viewModel: [SiteViewModel]?
     
@@ -26,16 +26,20 @@ class SitesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareView()
         prepareTableView()
         registerCells()
         prepareActivityIndicator()
         prepareRetryButton()
         presenter?.viewDidLoad()
     }
-    
-    private func prepareTableView() {
+
+    private func prepareView() {
         self.view.backgroundColor = .backgroundColor
         self.navigationItem.title = Constants.titleView
+    }
+
+    private func prepareTableView() {
         tableView.dataSource = dataSource
         tableView.delegate = delegate
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,18 +61,21 @@ class SitesViewController: UIViewController {
     }
     
     private func prepareActivityIndicator() {
-        self.loadIndicatorView.center = self.view.center
+        self.loadIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         self.loadIndicatorView.color = .titleColor
         self.view.addSubview(self.loadIndicatorView)
+        
+        Layout.center(view: loadIndicatorView, in: self.view)
     }
     
     private func prepareRetryButton() {
+        self.retryButton.isHidden = true
         self.retryButton.center = self.view.center
-        self.retryButton.setTitle("Reintentar", for: .normal)
+        self.retryButton.setTitle(Constants.titleRetryButton, for: .normal)
         self.retryButton.setTitleColor(.titleColor, for: .normal)
         self.retryButton.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(self.retryButton)
-        Layout.pin(view: retryButton, to: view)
+        Layout.center(view: retryButton, in: self.view)
         
         self.retryButton.addTarget(self, action: #selector(retryTouchUpInside), for: .touchUpInside)
     }

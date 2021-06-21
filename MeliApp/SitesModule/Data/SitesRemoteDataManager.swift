@@ -1,6 +1,7 @@
 import Alamofire
 
 class SitesRemoteDataManager: SitesRemoteDataManagerInputProtocol {
+    private let url = Endpoint.site
     var remoteRequestHandler: SitesRemoteDataManagerOutputProtocol?
     
     convenience init(remoteRequestHandler: SitesRemoteDataManagerOutputProtocol) {
@@ -9,7 +10,7 @@ class SitesRemoteDataManager: SitesRemoteDataManagerInputProtocol {
     }
     
     func externalGetData() {
-        AF.request("https://api.mercadolibre.com/sites", method: .get).responseJSON { response in
+        AF.request(url, method: .get).responseJSON { response in
             if response.response?.statusCode == 200 {
                 do {
                     let decoder = JSONDecoder()

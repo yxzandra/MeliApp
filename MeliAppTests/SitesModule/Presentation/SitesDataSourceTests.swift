@@ -24,11 +24,11 @@ class SitesDataSourceTests: XCTestCase {
     }
     
     override func tearDown() {
-        super.tearDown()
-
+        tableView = nil
         viewController = nil
         sut = nil
         presenter = nil
+        super.tearDown()
     }
     
     func testNumberOfRowsReturnsZeroWhenViewModelIsNil() {
@@ -96,5 +96,4 @@ class SitesDataSourceTests: XCTestCase {
         XCTAssertTrue(cell is T)
         XCTAssertEqual(cellClassName, tableViewCellClassName)
     }
-
 }

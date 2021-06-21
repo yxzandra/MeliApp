@@ -20,10 +20,10 @@ class SitesPresenter  {
 
 extension SitesPresenter: SitesPresenterProtocol {
     func viewDidLoad() {
-        interactor?.getSites()
         view?.loadActivity()
         view?.hideTableView(isHide: true)
         view?.hideRetryButton(isHide: true)
+        interactor?.getSites()
     }
     
     func siteSelected(site: SiteViewModel) {

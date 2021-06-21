@@ -12,19 +12,11 @@ class ItemSiteCell: UITableViewCell {
         nameLabel.topAnchor.constraint(
             equalTo: contentView.topAnchor
         ).isActive = true
-        
-        nameLabel.leadingAnchor.constraint(
-            equalTo: contentView.leadingAnchor,
-            constant: CGFloat(6)
-        ).isActive = true
-        
-        nameLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: CGFloat(6)
-        ).isActive = true
 
         nameLabel.bottomAnchor.constraint(
             equalTo: contentView.bottomAnchor
         ).isActive = true
+        
+        Layout.marginPin(of: nameLabel, in: contentView, constant: CGFloat(6))
     }
 }

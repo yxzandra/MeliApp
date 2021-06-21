@@ -33,7 +33,6 @@ class SitesPresenterTests: XCTestCase {
         XCTAssertTrue(interactor.getSitesCalled)
         XCTAssertTrue(view.hideTableViewCalled)
         XCTAssertTrue(view.hideRetryButtonCalled)
-        
     }
     
     func testSiteSelectedSuccess() {

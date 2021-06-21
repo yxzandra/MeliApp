@@ -17,14 +17,7 @@ class TitleSiteCell: UITableViewCell {
             constant: CGFloat(12)
         ).isActive = true
         
-        logoImage.leadingAnchor.constraint(
-            equalTo: contentView.leadingAnchor
-        ).isActive = true
-        
-        logoImage.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor
-        ).isActive = true
-        
+        Layout.marginPin(of: contentLabel, in: contentView)
     }
     
     private func prepareContentLabel() {
@@ -32,16 +25,10 @@ class TitleSiteCell: UITableViewCell {
             equalTo: logoImage.topAnchor
         ).isActive = true
         
-        contentLabel.leadingAnchor.constraint(
-            equalTo: contentView.leadingAnchor
-        ).isActive = true
-        
-        contentLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor
-        ).isActive = true
-        
         contentLabel.bottomAnchor.constraint(
             equalTo: contentView.bottomAnchor
         ).isActive = true
+        
+        Layout.marginPin(of: contentLabel, in: contentView)
     }
 }
