@@ -61,9 +61,11 @@ class SitesViewController: UIViewController {
     }
     
     private func prepareActivityIndicator() {
-        self.loadIndicatorView.center = self.view.center
+        self.loadIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         self.loadIndicatorView.color = .titleColor
         self.view.addSubview(self.loadIndicatorView)
+        
+        Layout.center(view: loadIndicatorView, in: self.view)
     }
     
     private func prepareRetryButton() {

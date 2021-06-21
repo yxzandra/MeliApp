@@ -5,16 +5,37 @@ class SearchViewController: UIViewController {
     typealias Constants = SearchViewConstants
     internal var presenter: SearchPresenterProtocol?
     
-    let inputSearch = UITextField()
-    let buttonSearch = UIButton()
-
+    private let loadIndicatorView = UIActivityIndicatorView(style: .large)
+    private let tableView = UITableView()
+    private var delegate: SearchDelegate?
+    private var dataSource: SearchDataSource?
+    
+    var idSite = String()
+    var viewModel: [SearchViewModel]?
+    var showError: Bool = false
+    
+    convenience init(
+        dataSource: SearchDataSource,
+        delegate: SearchDelegate,
+        presenter: SearchPresenterProtocol
+    ) {
+        self.init()
+        dataSource.viewController = self
+        delegate.viewController = self
+        self.dataSource = dataSource
+        self.delegate = delegate
+        self.presenter = presenter
+    }
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareView()
-        prepareInputSearch()
-        prepareSearchButton()
+        prepareTableView()
+        registerCells()
+        prepareActivityIndicator()
+        presenter?.viewDidLoad(idSite: idSite)
     }
     
     private func prepareView() {
@@ -22,46 +43,66 @@ class SearchViewController: UIViewController {
         self.navigationItem.title = Constants.titleView
     }
     
-    private func prepareInputSearch() {
-        inputSearch.placeholder = Constants.placeholderTextField
-        inputSearch.translatesAutoresizingMaskIntoConstraints = false
-        inputSearch.borderStyle = UITextField.BorderStyle.roundedRect
-        inputSearch.autocorrectionType = UITextAutocorrectionType.no
-        inputSearch.clearButtonMode = UITextField.ViewMode.whileEditing
-        inputSearch.delegate = self
-        self.view.addSubview(inputSearch)
+    private func prepareTableView() {
+        tableView.dataSource = dataSource
+        tableView.delegate = delegate
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(tableView)
+        Layout.pin(view: tableView, to: view)
         
-        inputSearch.topAnchor.constraint(equalTo: self.view.topAnchor, constant: CGFloat(125)).isActive = true
-        Layout.centerXAnchor(of: inputSearch, in: self.view)
-        Layout.marginPin(of: inputSearch, in: self.view, constant: Constants.marginItems)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorStyle = .none
+
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = .clear
+        tableView.alwaysBounceHorizontal = false
     }
     
-    private func prepareSearchButton() {
-        self.buttonSearch.setTitle(Constants.titleSearchButton, for: .normal)
-        self.buttonSearch.setTitleColor(.titleColor, for: .normal)
-        self.buttonSearch.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.buttonSearch)
-        
-        self.buttonSearch.addTarget(self, action: #selector(searchTouchUpInside), for: .touchUpInside)
-        
-        buttonSearch.topAnchor.constraint(equalTo: self.inputSearch.bottomAnchor, constant: CGFloat(12)).isActive = true
-        Layout.centerXAnchor(of: buttonSearch, in: self.view)
-        Layout.marginPin(of: buttonSearch, in: self.view, constant: Constants.marginItems)
+    private func registerCells() {
+        tableView.register(UINib(nibName: Constants.NibCell.nibSearchCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibSearchCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibItemSearchCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibItemSearchCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibErrorSearchCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibErrorSearchCell)
     }
     
-    @objc func searchTouchUpInside() {
-        guard let text = inputSearch.text else { return }
-        presenter?.searchItem(item: text)
+    private func prepareActivityIndicator() {
+        self.loadIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        self.loadIndicatorView.color = .titleColor
+        self.view.addSubview(self.loadIndicatorView)
+        
+        Layout.center(view: loadIndicatorView, in: self.view)
     }
 }
 
 extension SearchViewController: SearchViewProtocol {
-    // TODO: implement view output methods
-}
+    func presenterErrorView() {
+        showError = true
+        viewModel = nil
+        self.tableView.reloadData()
+    }
+    
+    func presenterPushDataView(receivedData: [SearchViewModel]?) {
+        self.showError = false
+        self.viewModel = receivedData
+        self.tableView.reloadData()
+    }
+    
+    func hideTableView(isHide: Bool) {
+        DispatchQueue.main.async {
+            self.tableView.isHidden = isHide
+        }
+    }
+    
+    func loadActivity() {
+        DispatchQueue.main.async {
+            self.loadIndicatorView.startAnimating()
+        }
+    }
 
-extension SearchViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.searchTouchUpInside()
-        return true
+    func stopAndHideActivity() {
+        DispatchQueue.main.async {
+            self.loadIndicatorView.stopAnimating()
+            self.loadIndicatorView.hidesWhenStopped = true
+        }
     }
 }

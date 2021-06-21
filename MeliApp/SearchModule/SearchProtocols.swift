@@ -4,6 +4,11 @@ import UIKit
 protocol SearchViewProtocol: AnyObject {
     // PRESENTER -> VIEW
     var presenter: SearchPresenterProtocol? { get set }
+    func loadActivity()
+    func stopAndHideActivity()
+    func hideTableView(isHide: Bool)
+    func presenterPushDataView(receivedData: [SearchViewModel]?)
+    func presenterErrorView()
 }
 
 protocol SearchWireFrameProtocol: AnyObject {
@@ -17,11 +22,14 @@ protocol SearchPresenterProtocol: AnyObject {
     var interactor: SearchInteractorInputProtocol? { get set }
     var wireFrame: SearchWireFrameProtocol? { get set }
     
+    func viewDidLoad(idSite: String)
     func searchItem(item: String)
 }
 
 protocol SearchInteractorOutputProtocol: AnyObject {
-// INTERACTOR -> PRESENTER
+    // INTERACTOR -> PRESENTER
+    func interactorErrorDataPresenter()
+    func interactorPushDataPresenter(receivedData: [SearchViewModel])
 }
 
 protocol SearchInteractorInputProtocol: AnyObject {
@@ -29,6 +37,8 @@ protocol SearchInteractorInputProtocol: AnyObject {
     var presenter: SearchInteractorOutputProtocol? { get set }
     var localDatamanager: SearchLocalDataManagerInputProtocol? { get set }
     var remoteDatamanager: SearchRemoteDataManagerInputProtocol? { get set }
+    
+    func searchItem(item: String, idSite: String)
 }
 
 protocol SearchDataManagerInputProtocol: AnyObject {
@@ -38,10 +48,13 @@ protocol SearchDataManagerInputProtocol: AnyObject {
 protocol SearchRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: SearchRemoteDataManagerOutputProtocol? { get set }
+    func externalSearchItem(item: String, idSite: String)
 }
 
 protocol SearchRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
+    func returnData(data: Search)
+    func errorData()
 }
 
 protocol SearchLocalDataManagerInputProtocol: AnyObject {
