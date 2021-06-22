@@ -4,7 +4,7 @@ class CarouselDetailCell: UITableViewCell {
     @IBOutlet weak var carouselScroll: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var imageList = [String]()
+    private let withScreen = UIScreen.main.bounds.size.width
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -15,20 +15,7 @@ class CarouselDetailCell: UITableViewCell {
     }
     
     func loadData(imageList: [String]) {
-        let bounds = UIScreen.main.bounds.size.width
-        
-        for (index, image) in imageList.enumerated() {
-            let imgView = UIImageView()
-            imgView.imageFromServerURL(urlString: image, defaultImage: "placeholder")
-            imgView.clipsToBounds = true
-            carouselScroll.addAutoLayout(subview: imgView)
-            imgView.heightAnchor.constraint(equalTo: carouselScroll.heightAnchor).isActive = true
-            imgView.widthAnchor.constraint(equalTo: carouselScroll.widthAnchor).isActive = true
-            imgView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-            
-            imgView.leadingAnchor.constraint(equalTo: carouselScroll.leadingAnchor, constant: bounds * CGFloat(index)).isActive = true
-        }
-        carouselScroll.contentSize = CGSize(width: CGFloat(imageList.count) * bounds, height: carouselScroll.frame.height)
+        loadImages(imageList)
         
         pageControl.numberOfPages = imageList.count
         pageControl.currentPage = .zero
@@ -37,13 +24,32 @@ class CarouselDetailCell: UITableViewCell {
         pageControl.pageIndicatorTintColor = .lightGray
     }
     
+    private func loadImages(_ imageList: [String]) {
+        for (index, image) in imageList.enumerated() {
+            let imgView = UIImageView()
+            imgView.imageFromServerURL(urlString: image, defaultImage: .placeholder)
+            imgView.clipsToBounds = true
+            carouselScroll.addAutoLayout(subview: imgView)
+            imgView.adjustsImageSizeForAccessibilityContentSizeCategory = true
+            
+            NSLayoutConstraint.activate([
+                imgView.heightAnchor.constraint(equalTo: carouselScroll.heightAnchor),
+                imgView.widthAnchor.constraint(equalTo: carouselScroll.widthAnchor),
+                imgView.leadingAnchor.constraint(equalTo: carouselScroll.leadingAnchor, constant: withScreen * CGFloat(index))
+            ])
+        }
+        carouselScroll.contentSize = CGSize(width: CGFloat(imageList.count) * withScreen, height: carouselScroll.frame.height)
+    }
+
     private func prepareCarouselScroll(){
         carouselScroll.isPagingEnabled = true
         carouselScroll.alwaysBounceHorizontal = true
         carouselScroll.showsHorizontalScrollIndicator = false
-        carouselScroll.heightAnchor.constraint(equalToConstant: 160).isActive = true
-        carouselScroll?.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
-        Layout.pin(view: carouselScroll, to: contentView)
+        
+        NSLayoutConstraint.activate([
+            carouselScroll.heightAnchor.constraint(equalToConstant: 160),
+            carouselScroll.widthAnchor.constraint(equalTo: contentView.widthAnchor)
+        ])
     }
     
     private func preparePageControl(){

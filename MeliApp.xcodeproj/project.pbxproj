@@ -38,6 +38,12 @@
 		A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */; };
 		A44B84B3267C24EA005C348D /* SitesInteractorOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */; };
 		A44B84B5267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */; };
+		A459A57B268234AB002460ED /* HeaderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A579268234AB002460ED /* HeaderDetailCell.swift */; };
+		A459A57C268234AB002460ED /* HeaderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A459A57A268234AB002460ED /* HeaderDetailCell.xib */; };
+		A459A57E26825070002460ED /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A57D26825070002460ED /* Description.swift */; };
+		A459A58426825B44002460ED /* DescriptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A58226825B44002460ED /* DescriptionDetailCell.swift */; };
+		A459A58526825B44002460ED /* DescriptionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A459A58326825B44002460ED /* DescriptionDetailCell.xib */; };
+		A459A58926827CB8002460ED /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A459A58826827CB8002460ED /* UIImageExtension.swift */; };
 		A46540FB267E696D009E1730 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46540F4267E696D009E1730 /* SearchPresenter.swift */; };
 		A46540FD267E696D009E1730 /* SearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46540F6267E696D009E1730 /* SearchProtocols.swift */; };
 		A46540FE267E696D009E1730 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46540F7267E696D009E1730 /* SearchInteractor.swift */; };
@@ -179,6 +185,12 @@
 		A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManagerMock.swift; sourceTree = "<group>"; };
 		A44B84B2267C24EA005C348D /* SitesInteractorOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesInteractorOutputMock.swift; sourceTree = "<group>"; };
 		A44B84B4267C29D3005C348D /* SitesRemoteDataManagerOutputMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerOutputMock.swift; sourceTree = "<group>"; };
+		A459A579268234AB002460ED /* HeaderDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailCell.swift; sourceTree = "<group>"; };
+		A459A57A268234AB002460ED /* HeaderDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderDetailCell.xib; sourceTree = "<group>"; };
+		A459A57D26825070002460ED /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
+		A459A58226825B44002460ED /* DescriptionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDetailCell.swift; sourceTree = "<group>"; };
+		A459A58326825B44002460ED /* DescriptionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionDetailCell.xib; sourceTree = "<group>"; };
+		A459A58826827CB8002460ED /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		A46540F4267E696D009E1730 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		A46540F6267E696D009E1730 /* SearchProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocols.swift; sourceTree = "<group>"; };
 		A46540F7267E696D009E1730 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
@@ -407,6 +419,7 @@
 				A41922AB26769C9D00C967E0 /* UIColorExtension.swift */,
 				A41922C82676D3E700C967E0 /* UIViewExtension.swift */,
 				A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */,
+				A459A58826827CB8002460ED /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +498,33 @@
 				A425D2B4267816E500852F37 /* ItemSiteCell.xib */,
 			);
 			path = ItemSiteCell;
+			sourceTree = "<group>";
+		};
+		A459A57526823462002460ED /* CarouselDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234CE26813F3F00795264 /* CarouselDetailCell.swift */,
+				A4B234CF26813F3F00795264 /* CarouselDetailCell.xib */,
+			);
+			path = CarouselDetailCell;
+			sourceTree = "<group>";
+		};
+		A459A57626823475002460ED /* HeaderDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				A459A579268234AB002460ED /* HeaderDetailCell.swift */,
+				A459A57A268234AB002460ED /* HeaderDetailCell.xib */,
+			);
+			path = HeaderDetailCell;
+			sourceTree = "<group>";
+		};
+		A459A57F268259DB002460ED /* DescriptionDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				A459A58226825B44002460ED /* DescriptionDetailCell.swift */,
+				A459A58326825B44002460ED /* DescriptionDetailCell.xib */,
+			);
+			path = DescriptionDetailCell;
 			sourceTree = "<group>";
 		};
 		A46540F3267E694A009E1730 /* SearchModule */ = {
@@ -711,6 +751,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B234C22681313300795264 /* Detail.swift */,
+				A459A57D26825070002460ED /* Description.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -727,8 +768,9 @@
 		A4B234CB26813F0600795264 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				A4B234CE26813F3F00795264 /* CarouselDetailCell.swift */,
-				A4B234CF26813F3F00795264 /* CarouselDetailCell.xib */,
+				A459A57F268259DB002460ED /* DescriptionDetailCell */,
+				A459A57526823462002460ED /* CarouselDetailCell */,
+				A459A57626823475002460ED /* HeaderDetailCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -984,7 +1026,9 @@
 				A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */,
 				A4B234D126813F3F00795264 /* CarouselDetailCell.xib in Resources */,
 				A465412A267EC9E1009E1730 /* ItemSearchCell.xib in Resources */,
+				A459A57C268234AB002460ED /* HeaderDetailCell.xib in Resources */,
 				A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */,
+				A459A58526825B44002460ED /* DescriptionDetailCell.xib in Resources */,
 				A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */,
 				A419226E2676873400C967E0 /* Assets.xcassets in Resources */,
 				A4B93C8A267F939C0045A1D4 /* ErrorSearchCell.xib in Resources */,
@@ -1129,6 +1173,7 @@
 				A41922B62676A05400C967E0 /* SiteViewModel.swift in Sources */,
 				A465410A267E72C9009E1730 /* Endpoint.swift in Sources */,
 				A4B234B22681268900795264 /* DetailWireFrame.swift in Sources */,
+				A459A58926827CB8002460ED /* UIImageExtension.swift in Sources */,
 				A419229D2676886300C967E0 /* SitesProtocols.swift in Sources */,
 				A465B1F626781EAA00201B51 /* TitleSiteCell.swift in Sources */,
 				A4654129267EC9E1009E1730 /* ItemSearchCell.swift in Sources */,
@@ -1148,6 +1193,7 @@
 				A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */,
 				A4B234AC2681268900795264 /* DetailPresenter.swift in Sources */,
 				A4B234AF2681268900795264 /* DetailInteractor.swift in Sources */,
+				A459A58426825B44002460ED /* DescriptionDetailCell.swift in Sources */,
 				A419229F2676886300C967E0 /* SitesViewController.swift in Sources */,
 				A46540FB267E696D009E1730 /* SearchPresenter.swift in Sources */,
 				A46540FD267E696D009E1730 /* SearchProtocols.swift in Sources */,
@@ -1155,6 +1201,7 @@
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
 				A4B234B02681268900795264 /* DetailViewController.swift in Sources */,
 				A4654115267EA901009E1730 /* SearchMapper.swift in Sources */,
+				A459A57E26825070002460ED /* Description.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
 				A4B234C026812D8700795264 /* DetailViewModel.swift in Sources */,
 				A4B234AE2681268900795264 /* DetailProtocols.swift in Sources */,
@@ -1164,6 +1211,7 @@
 				A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */,
 				A4654101267E696D009E1730 /* SearchWireFrame.swift in Sources */,
 				A4654119267EB6F7009E1730 /* SearchDataSource.swift in Sources */,
+				A459A57B268234AB002460ED /* HeaderDetailCell.swift in Sources */,
 				A46540FF267E696D009E1730 /* SearchViewController.swift in Sources */,
 				A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */,
 				A465411B267EB704009E1730 /* SearchDelegate.swift in Sources */,

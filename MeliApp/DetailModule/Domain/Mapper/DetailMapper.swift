@@ -1,7 +1,7 @@
 import UIKit
 
 class DetailMapper {
-    var pictureMapper = PictureMapper()
+    private var pictureMapper = PictureMapper()
     
     convenience init(pictureMapper: PictureMapper) {
         self.init()
@@ -18,7 +18,8 @@ class DetailMapper {
             soldQuantity: String(value.soldQuantity),
             pictures: pictureMapper.reverseMap(values: value.pictures),
             status: value.status == "active",
-            warranty: value.warranty
+            warranty: value.warranty ?? "Sin garantía",
+            description: nil
         )
         return viewModel
     }

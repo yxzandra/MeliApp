@@ -1,7 +1,7 @@
 import UIKit
 
 class SearchMapper {
-    typealias Constants = SearchViewConstants
+    private typealias Constants = SearchViewConstants
     
     func reverseMap(value: Result) -> SearchViewModel {
         let viewModel = SearchViewModel(

@@ -9,7 +9,9 @@ protocol DetailViewProtocol: AnyObject {
     func stopAndHideActivity()
     func hideTableView(isHide: Bool)
     func presenterPushDataView(receivedData: DetailViewModel)
-    func presenterErrorView()
+    func presenterPushDetailDataView(receivedData: String)
+    func presenterErrorDataView()
+    func presenterErrorDescriptionView()
 }
 
 protocol DetailWireFrameProtocol: AnyObject {
@@ -24,12 +26,15 @@ protocol DetailPresenterProtocol: AnyObject {
     var wireFrame: DetailWireFrameProtocol? { get set }
     
     func viewDidLoad(idItem: String)
+    func getDetailDescription(idItem: String)
 }
 
 protocol DetailInteractorOutputProtocol: AnyObject {
     // INTERACTOR -> PRESENTER
     func interactorErrorDataPresenter()
+    func interactorErrorDescriptionPresenter()
     func interactorPushDataPresenter(receivedData: DetailViewModel)
+    func interactorPushDescriptionPresenter(receivedData: String)
 }
 
 protocol DetailInteractorInputProtocol: AnyObject {
@@ -38,16 +43,21 @@ protocol DetailInteractorInputProtocol: AnyObject {
     var remoteDatamanager: DetailRemoteDataManagerInputProtocol? { get set }
     
     func getDetailItem(idItem: String)
+    func getDescriptionItem(idItem: String)
 }
 
 protocol DetailRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: DetailRemoteDataManagerOutputProtocol? { get set }
+
     func externalDetailItem(idItem: String)
+    func externalDescriptionItem(idItem: String)
 }
 
 protocol DetailRemoteDataManagerOutputProtocol: AnyObject {
     // REMOTEDATAMANAGER -> INTERACTOR
     func returnData(data: Detail)
+    func returnDescription(data: Description)
     func errorData()
+    func errorDescription()
 }

@@ -5,6 +5,16 @@ class DetailDelegate: NSObject {
 }
 
 extension DetailDelegate: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellSection = DetailCellTypes.default[indexPath.row]
+        switch cellSection {
+        case .carousel, .header:
+            break
+        case .description:
+            viewController?.validateDescription()
+        }
+    }
+
     func tableView(_: UITableView, estimatedHeightForRowAt _: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -13,4 +23,3 @@ extension DetailDelegate: UITableViewDelegate {
         return self.tableView(tableView, estimatedHeightForRowAt: indexPath)
     }
 }
-

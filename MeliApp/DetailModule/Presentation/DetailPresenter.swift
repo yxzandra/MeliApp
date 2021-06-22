@@ -1,7 +1,7 @@
 import Foundation
 
 class DetailPresenter  {
-    
+
     // MARK: Properties
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
@@ -25,18 +25,30 @@ extension DetailPresenter: DetailPresenterProtocol {
         view?.hideTableView(isHide: true)
         interactor?.getDetailItem(idItem: idItem)
     }
+
+    func getDetailDescription(idItem: String) {
+        interactor?.getDescriptionItem(idItem: idItem)
+    }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
     func interactorErrorDataPresenter() {
         view?.stopAndHideActivity()
         view?.hideTableView(isHide: false)
-        view?.presenterErrorView()
+        view?.presenterErrorDataView()
     }
     
     func interactorPushDataPresenter(receivedData: DetailViewModel) {
         view?.stopAndHideActivity()
         view?.hideTableView(isHide: false)
         view?.presenterPushDataView(receivedData: receivedData)
+    }
+    
+    func interactorErrorDescriptionPresenter() {
+        view?.presenterErrorDescriptionView()
+    }
+    
+    func interactorPushDescriptionPresenter(receivedData: String) {
+        view?.presenterPushDetailDataView(receivedData: receivedData)
     }
 }

@@ -5,7 +5,8 @@ struct Detail: Codable {
     let currencyID: String
     let availableQuantity, soldQuantity: Int
     let pictures: [Picture]
-    let status, warranty: String
+    let status: String
+    let warranty: String?
 
     enum CodingKeys: String, CodingKey {
         case id

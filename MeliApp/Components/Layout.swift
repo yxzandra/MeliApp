@@ -1,7 +1,7 @@
 import UIKit
 
 class Layout {
-
+    
     class func pin(view: UIView, to superview: UIView, insets: UIEdgeInsets = .zero) {
         if #available(iOS 11.0, *) {
             NSLayoutConstraint.activate([
@@ -33,7 +33,7 @@ class Layout {
             let width = superview.frame.width / 2
             constraintsToActivate += [view.widthAnchor.constraint(equalToConstant: width)]
         }
-
+        
         NSLayoutConstraint.activate(constraintsToActivate)
     }
 
@@ -45,12 +45,14 @@ class Layout {
             let height = superview.frame.height / 2
             constraintsToActivate += [view.heightAnchor.constraint(equalToConstant: height)]
         }
-
+        
         NSLayoutConstraint.activate(constraintsToActivate)
     }
-    
+
     class func marginPin(of view: UIView, in superview: UIView, constant: CGFloat = .zero ) {
-        view.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: constant).isActive = true
-        view.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -constant).isActive = true
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: constant),
+            view.trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -constant)
+        ])
     }
 }

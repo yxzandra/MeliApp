@@ -8,5 +8,6 @@ struct DetailViewModel {
     let pictures: [String]
     let status: Bool
     let warranty: String
+    var description: String?
 }
 

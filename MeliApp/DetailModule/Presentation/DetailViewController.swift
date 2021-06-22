@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     var idItem = String()
     var viewModel: DetailViewModel?
     var showError: Bool = false
+    var showDescription: Bool = false
     
     convenience init(
         mainDispatchQueue: DispatchQueue = DispatchQueue.main,
@@ -64,12 +65,28 @@ class DetailViewController: UIViewController {
     
     private func registerCells() {
         tableView.register(UINib(nibName: Constants.NibCell.nibCarouselDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibCarouselDetailCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibHeaderDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibHeaderDetailCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibDescriptionDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibDescriptionDetailCell)
     }
     
     private func prepareActivityIndicator() {
         self.loadIndicatorView.color = .titleColor
         self.view.addAutoLayout(subview: self.loadIndicatorView)
         Layout.center(view: loadIndicatorView, in: self.view)
+    }
+    
+    func validateDescription() {
+        guard let model = viewModel,
+              model.description == nil,
+              !showDescription
+        else {
+            showDescription = !showDescription
+            let index = DetailCellTypes.default.firstIndex(of: .description) ?? .zero
+            tableView.reloadRows(at: [IndexPath(row: index, section: .zero)], with: .fade)
+            return
+        }
+
+        presenter?.getDetailDescription(idItem: model.id)
     }
 }
 
@@ -99,9 +116,19 @@ extension DetailViewController: DetailViewProtocol {
         self.tableView.reloadData()
     }
     
-    func presenterErrorView() {
+    func presenterErrorDataView() {
         showError = true
         viewModel = nil
         self.tableView.reloadData()
+    }
+
+    func presenterPushDetailDataView(receivedData: String) {
+        self.viewModel?.description = receivedData
+        validateDescription()
+    }
+
+    func presenterErrorDescriptionView() {
+        self.viewModel?.description = Constants.DescriptionDetailCell.messageError
+        validateDescription()
     }
 }
