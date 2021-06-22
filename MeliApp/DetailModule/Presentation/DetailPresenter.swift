@@ -6,15 +6,37 @@ class DetailPresenter  {
     weak var view: DetailViewProtocol?
     var interactor: DetailInteractorInputProtocol?
     var wireFrame: DetailWireFrameProtocol?
-    
+
+    convenience init(
+        view: DetailViewProtocol,
+        interactor: DetailInteractorInputProtocol,
+        wireFrame: DetailWireFrameProtocol
+    ) {
+        self.init()
+        self.view = view
+        self.interactor = interactor
+        self.wireFrame = wireFrame
+    }
 }
 
 extension DetailPresenter: DetailPresenterProtocol {
-    // TODO: implement presenter methods
-    func viewDidLoad() {
+    func viewDidLoad(idItem: String) {
+        view?.loadActivity()
+        view?.hideTableView(isHide: true)
+        interactor?.getDetailItem(idItem: idItem)
     }
 }
 
 extension DetailPresenter: DetailInteractorOutputProtocol {
-    // TODO: implement interactor output methods
+    func interactorErrorDataPresenter() {
+        view?.stopAndHideActivity()
+        view?.hideTableView(isHide: false)
+        view?.presenterErrorView()
+    }
+    
+    func interactorPushDataPresenter(receivedData: DetailViewModel) {
+        view?.stopAndHideActivity()
+        view?.hideTableView(isHide: false)
+        view?.presenterPushDataView(receivedData: receivedData)
+    }
 }

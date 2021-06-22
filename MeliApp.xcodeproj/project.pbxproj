@@ -98,6 +98,12 @@
 		A4B234B92681279A00795264 /* DetailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234B82681279A00795264 /* DetailDelegate.swift */; };
 		A4B234BB2681285900795264 /* DetailCellTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234BA2681285900795264 /* DetailCellTypes.swift */; };
 		A4B234BD268128B300795264 /* DetailViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234BC268128B300795264 /* DetailViewConstants.swift */; };
+		A4B234C026812D8700795264 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234BF26812D8700795264 /* DetailViewModel.swift */; };
+		A4B234C32681313300795264 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234C22681313300795264 /* Detail.swift */; };
+		A4B234C62681315200795264 /* DetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234C52681315200795264 /* DetailMapper.swift */; };
+		A4B234C826813B9800795264 /* PictureMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234C726813B9800795264 /* PictureMapper.swift */; };
+		A4B234D026813F3F00795264 /* CarouselDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B234CE26813F3F00795264 /* CarouselDetailCell.swift */; };
+		A4B234D126813F3F00795264 /* CarouselDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B234CF26813F3F00795264 /* CarouselDetailCell.xib */; };
 		A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */; };
 		A4B93C89267F939C0045A1D4 /* ErrorSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */; };
 		A4B93C8A267F939C0045A1D4 /* ErrorSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */; };
@@ -233,6 +239,12 @@
 		A4B234B82681279A00795264 /* DetailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDelegate.swift; sourceTree = "<group>"; };
 		A4B234BA2681285900795264 /* DetailCellTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellTypes.swift; sourceTree = "<group>"; };
 		A4B234BC268128B300795264 /* DetailViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewConstants.swift; sourceTree = "<group>"; };
+		A4B234BF26812D8700795264 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A4B234C22681313300795264 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		A4B234C52681315200795264 /* DetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapper.swift; sourceTree = "<group>"; };
+		A4B234C726813B9800795264 /* PictureMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureMapper.swift; sourceTree = "<group>"; };
+		A4B234CE26813F3F00795264 /* CarouselDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDetailCell.swift; sourceTree = "<group>"; };
+		A4B234CF26813F3F00795264 /* CarouselDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselDetailCell.xib; sourceTree = "<group>"; };
 		A4B93C83267F8D490045A1D4 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		A4B93C87267F939C0045A1D4 /* ErrorSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorSearchCell.swift; sourceTree = "<group>"; };
 		A4B93C88267F939C0045A1D4 /* ErrorSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorSearchCell.xib; sourceTree = "<group>"; };
@@ -657,6 +669,7 @@
 		A4B234B32681272F00795264 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A4B234C12681312000795264 /* Model */,
 				A4B234AA2681268900795264 /* DetailRemoteDataManager.swift */,
 			);
 			path = Data;
@@ -665,6 +678,7 @@
 		A4B234B42681273500795264 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A4B234C42681314300795264 /* Mapper */,
 				A4B234A82681268900795264 /* DetailInteractor.swift */,
 			);
 			path = Domain;
@@ -673,6 +687,8 @@
 		A4B234B52681274400795264 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A4B234CB26813F0600795264 /* Cell */,
+				A4B234BE26812D7900795264 /* ViewModel */,
 				A4B234A52681268900795264 /* DetailPresenter.swift */,
 				A4B234A92681268900795264 /* DetailViewController.swift */,
 				A4B234B62681278C00795264 /* DetailDataSource.swift */,
@@ -681,6 +697,40 @@
 				A4B234BC268128B300795264 /* DetailViewConstants.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A4B234BE26812D7900795264 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234BF26812D8700795264 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4B234C12681312000795264 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234C22681313300795264 /* Detail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4B234C42681314300795264 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234C52681315200795264 /* DetailMapper.swift */,
+				A4B234C726813B9800795264 /* PictureMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		A4B234CB26813F0600795264 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A4B234CE26813F3F00795264 /* CarouselDetailCell.swift */,
+				A4B234CF26813F3F00795264 /* CarouselDetailCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A4B93C86267F937E0045A1D4 /* ErrorSearchCell */ = {
@@ -932,6 +982,7 @@
 				A4654124267EB780009E1730 /* SearchCell.xib in Resources */,
 				A4B2348F2680EF2000795264 /* ErrorSiteCell.xib in Resources */,
 				A41922712676873400C967E0 /* LaunchScreen.storyboard in Resources */,
+				A4B234D126813F3F00795264 /* CarouselDetailCell.xib in Resources */,
 				A465412A267EC9E1009E1730 /* ItemSearchCell.xib in Resources */,
 				A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */,
 				A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */,
@@ -1086,11 +1137,13 @@
 				A4654123267EB780009E1730 /* SearchCell.swift in Sources */,
 				A465411D267EB71F009E1730 /* SearchCellTypes.swift in Sources */,
 				A41922652676873200C967E0 /* AppDelegate.swift in Sources */,
+				A4B234D026813F3F00795264 /* CarouselDetailCell.swift in Sources */,
 				A4654112267EA83F009E1730 /* SearchViewModel.swift in Sources */,
 				A41922672676873200C967E0 /* SceneDelegate.swift in Sources */,
 				A4B234B92681279A00795264 /* DetailDelegate.swift in Sources */,
 				A4B234BD268128B300795264 /* DetailViewConstants.swift in Sources */,
 				A419229B2676886300C967E0 /* SitesPresenter.swift in Sources */,
+				A4B234C826813B9800795264 /* PictureMapper.swift in Sources */,
 				A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */,
 				A4B93C84267F8D490045A1D4 /* UIImageViewExtension.swift in Sources */,
 				A4B234AC2681268900795264 /* DetailPresenter.swift in Sources */,
@@ -1098,13 +1151,16 @@
 				A419229F2676886300C967E0 /* SitesViewController.swift in Sources */,
 				A46540FB267E696D009E1730 /* SearchPresenter.swift in Sources */,
 				A46540FD267E696D009E1730 /* SearchProtocols.swift in Sources */,
+				A4B234C62681315200795264 /* DetailMapper.swift in Sources */,
 				A41922A12676886300C967E0 /* SitesWireFrame.swift in Sources */,
 				A4B234B02681268900795264 /* DetailViewController.swift in Sources */,
 				A4654115267EA901009E1730 /* SearchMapper.swift in Sources */,
 				A41922AC26769C9D00C967E0 /* UIColorExtension.swift in Sources */,
+				A4B234C026812D8700795264 /* DetailViewModel.swift in Sources */,
 				A4B234AE2681268900795264 /* DetailProtocols.swift in Sources */,
 				A41922B126769E8300C967E0 /* SitesDelegate.swift in Sources */,
 				A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */,
+				A4B234C32681313300795264 /* Detail.swift in Sources */,
 				A419229C2676886300C967E0 /* SitesLocalDataManager.swift in Sources */,
 				A4654101267E696D009E1730 /* SearchWireFrame.swift in Sources */,
 				A4654119267EB6F7009E1730 /* SearchDataSource.swift in Sources */,

@@ -28,7 +28,7 @@ class SearchWireFrame: SearchWireFrameProtocol {
     }
     
     func presentViewDetail(from view: SearchViewProtocol, idItem: String) {
-        let newDetailView = DetailWireFrame.createDetailModule()
+        let newDetailView = DetailWireFrame.createDetailModule(with: idItem)
 
         if let viewSource = view as? UIViewController {
             viewSource.navigationController?.pushViewController(newDetailView, animated: true)

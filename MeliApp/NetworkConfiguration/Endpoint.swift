@@ -3,4 +3,5 @@ enum Endpoint {
     
     static let site = urlBase + "/sites"
     static let search = urlBase + "/sites/{idSite}/search"
+    static let detail = urlBase + "/items/{idItem}"
 }

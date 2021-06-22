@@ -3,7 +3,7 @@ import UIKit
 
 class DetailWireFrame: DetailWireFrameProtocol {
     
-    class func createDetailModule() -> UIViewController {
+    class func createDetailModule(with data: String) -> UIViewController {
         let presenter: DetailPresenterProtocol & DetailInteractorOutputProtocol = DetailPresenter()
         
         let viewController = DetailViewController(
@@ -16,6 +16,7 @@ class DetailWireFrame: DetailWireFrameProtocol {
         let remoteDataManager: DetailRemoteDataManagerInputProtocol = DetailRemoteDataManager()
         let wireFrame: DetailWireFrameProtocol = DetailWireFrame()
 
+        viewController.idItem = data
         viewController.presenter = presenter
         presenter.view = viewController
         presenter.wireFrame = wireFrame

@@ -42,10 +42,6 @@ protocol SearchInteractorInputProtocol: AnyObject {
     func searchItem(item: String, idSite: String)
 }
 
-protocol SearchDataManagerInputProtocol: AnyObject {
-    // INTERACTOR -> DATAMANAGER
-}
-
 protocol SearchRemoteDataManagerInputProtocol: AnyObject {
     // INTERACTOR -> REMOTEDATAMANAGER
     var remoteRequestHandler: SearchRemoteDataManagerOutputProtocol? { get set }
