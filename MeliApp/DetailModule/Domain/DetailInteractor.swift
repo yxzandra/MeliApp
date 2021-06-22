@@ -6,6 +6,16 @@ class DetailInteractor: DetailInteractorInputProtocol {
     var remoteDatamanager: DetailRemoteDataManagerInputProtocol?
     let mapper = DetailMapper()
     
+    convenience init(
+        presenter: DetailInteractorOutputProtocol,
+        remoteDatamanager: DetailRemoteDataManagerInputProtocol
+    ) {
+        self.init()
+        self.presenter = presenter
+        self.remoteDatamanager = remoteDatamanager
+    }
+
+    
     func getDetailItem(idItem: String) {
         remoteDatamanager?.externalDetailItem(idItem: idItem)
     }
