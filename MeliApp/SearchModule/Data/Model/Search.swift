@@ -10,7 +10,7 @@ struct Result: Codable {
     let currencyID: String
     let acceptsMercadopago: Bool
     let thumbnail: String
-    let address: Address
+    let address: Address?
     let installments: Installments?
 
     enum CodingKeys: String, CodingKey {

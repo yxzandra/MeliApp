@@ -14,7 +14,7 @@ class SitesWireFrameTests: XCTestCase {
         super.tearDown()
     }
     
-    func testCreateSearchModuleSuccess() {
+    func testCreateSiteModuleSuccess() {
         let createModule = SitesWireFrame.createSitesModule()
         XCTAssertNotNil(createModule.children.first as? SitesViewController)
     }

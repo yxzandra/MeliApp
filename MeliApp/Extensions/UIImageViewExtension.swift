@@ -1,10 +1,9 @@
 import UIKit
 
-
 extension UIImageView {
-    public func imageFromServerURL(urlString: String, defaultImage : String?) {
-        if let di = defaultImage {
-            self.image = UIImage(named: di)
+    public func imageFromServerURL(urlString: String, defaultImage : UIImage?) {
+        if defaultImage != nil {
+            self.image = defaultImage
             self.contentMode = .scaleAspectFit
         }
         

@@ -47,8 +47,7 @@ class SitesViewController: UIViewController {
     private func prepareTableView() {
         tableView.dataSource = dataSource
         tableView.delegate = delegate
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(tableView)
+        self.view.addAutoLayout(subview: tableView)
         Layout.pin(view: tableView, to: view)
         
         tableView.showsVerticalScrollIndicator = false
@@ -67,10 +66,8 @@ class SitesViewController: UIViewController {
     }
     
     private func prepareActivityIndicator() {
-        self.loadIndicatorView.translatesAutoresizingMaskIntoConstraints = false
         self.loadIndicatorView.color = .titleColor
-        self.view.addSubview(self.loadIndicatorView)
-        
+        self.view.addAutoLayout(subview: self.loadIndicatorView)
         Layout.center(view: loadIndicatorView, in: self.view)
     }
 }

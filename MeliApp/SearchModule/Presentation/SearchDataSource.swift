@@ -24,7 +24,7 @@ class SearchDataSource: NSObject {
         cell.priceLabel.text = itemViewModel.price
         cell.mercadoPriceLabel.text = itemViewModel.mercadoPago
         cell.addressLabel.text = itemViewModel.address
-        cell.itemImage.imageFromServerURL(urlString: itemViewModel.thumbnail, defaultImage: "placeholder")
+        cell.itemImage.imageFromServerURL(urlString: itemViewModel.thumbnail, defaultImage: .placeholder)
         cell.backgroundColor = .white
         return cell
     }

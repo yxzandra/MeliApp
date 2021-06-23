@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 class SearchWireFrame: SearchWireFrameProtocol {
+
     class func createSearchModule(with data: String) -> UIViewController {
         let presenter: SearchPresenterProtocol & SearchInteractorOutputProtocol = SearchPresenter()
         
@@ -27,6 +28,10 @@ class SearchWireFrame: SearchWireFrameProtocol {
     }
     
     func presentViewDetail(from view: SearchViewProtocol, idItem: String) {
-        print("SearchWireFrame", idItem)
+        let newDetailView = DetailWireFrame.createDetailModule(with: idItem)
+
+        if let viewSource = view as? UIViewController {
+            viewSource.navigationController?.pushViewController(newDetailView, animated: true)
+        }
     }
 }

@@ -33,10 +33,10 @@ class SitesWireFrame: SitesWireFrameProtocol {
     }
 
     func presentViewSearch(from view: SitesViewProtocol, idSide: String) {
-        let newDetailView = SearchWireFrame.createSearchModule(with: idSide)
+        let newSearchView = SearchWireFrame.createSearchModule(with: idSide)
 
         if let viewSource = view as? UIViewController {
-            viewSource.navigationController?.pushViewController(newDetailView, animated: true)
+            viewSource.navigationController?.pushViewController(newSearchView, animated: true)
         }
     }
 }

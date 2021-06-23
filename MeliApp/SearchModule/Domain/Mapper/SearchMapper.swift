@@ -1,7 +1,7 @@
 import UIKit
 
 class SearchMapper {
-    typealias Constants = SearchViewConstants
+    private typealias Constants = SearchViewConstants
     
     func reverseMap(value: Result) -> SearchViewModel {
         let viewModel = SearchViewModel(
@@ -11,7 +11,7 @@ class SearchMapper {
             price: calculatePrice(Double(value.price), value.currencyID),
             mercadoPago: calculateMercadoPago(isValidate: value.acceptsMercadopago, installments: value.installments),
             thumbnail: value.thumbnail,
-            address: String(format: Constants.formatAddress, value.address.stateName, value.address.cityName)
+            address: calculateAddress(address: value.address)
         )
         return viewModel
     }
@@ -34,6 +34,14 @@ class SearchMapper {
     private func getSymbol(forCurrencyCode code: String) -> String? {
         let locale = NSLocale(localeIdentifier: code)
         return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+    }
+    
+    private func calculateAddress(address: Address?) -> String {
+        if let address = address {
+            return String(format: Constants.formatAddress, address.stateName, address.cityName)
+        } else {
+            return ""
+        }
     }
     
     private func calculateMercadoPago(isValidate: Bool, installments: Installments?) -> String {

@@ -19,4 +19,11 @@ class SearchWireFrameTests: XCTestCase {
         let createModule = SearchWireFrame.createSearchModule(with: "")
         XCTAssertNotNil(createModule as? SearchViewController)
     }
+    
+    func testPresentViewDetailSuccess() {
+        let createModule = SearchWireFrame.createSearchModule(with: "")
+        sut.presentViewDetail(from: createModule as! SearchViewProtocol, idItem: "")
+
+        XCTAssertFalse(createModule.isBeingPresented)
+    }
 }

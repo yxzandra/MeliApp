@@ -6,7 +6,7 @@ class SearchDelegateTests: XCTestCase {
     var tableView: UITableView!
     var presenter: SearchPresenterMock!
     var viewController: SearchViewController!
-    
+
     override func setUp() {
         super.setUp()
         
@@ -19,7 +19,7 @@ class SearchDelegateTests: XCTestCase {
         sut.viewController = viewController
         tableView.delegate = sut
     }
-    
+
     override func tearDown() {
         tableView = nil
         viewController = nil
@@ -27,7 +27,7 @@ class SearchDelegateTests: XCTestCase {
         presenter = nil
         super.tearDown()
     }
-    
+
     func testDidSelectRowRoutesWhenAppropiate() {
         let cellTypes = SearchCellTypes.default
         let viewModel = SearchViewModel.mocked()
@@ -46,7 +46,7 @@ class SearchDelegateTests: XCTestCase {
             }
         }
     }
-    
+
     func testDidSelectRowRoutesWhenViewModelNil() {
         for segmentIndex in 0 ..< SitesCellTypes.default.count {
             let indexPath = IndexPath(row: .zero, section: segmentIndex)
@@ -54,5 +54,4 @@ class SearchDelegateTests: XCTestCase {
             XCTAssertFalse(presenter.itemSelectedCalled)
         }
     }
-    
 }
