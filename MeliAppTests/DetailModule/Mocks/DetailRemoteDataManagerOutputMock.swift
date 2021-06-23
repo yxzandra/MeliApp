@@ -22,5 +22,4 @@ class DetailRemoteDataManagerOutputMock: DetailRemoteDataManagerOutputProtocol {
     func errorDescription() {
         errorDescriptionCalled = true
     }
-    
 }

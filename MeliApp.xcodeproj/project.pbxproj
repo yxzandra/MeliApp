@@ -584,20 +584,12 @@
 		A459A58A2682887B002460ED /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
-				A459A58B2682888F002460ED /* Data */,
 				A459A58C26828896002460ED /* Domain */,
 				A459A59526828943002460ED /* Mocks */,
 				A459A58D2682889B002460ED /* Presentation */,
 				A459A58E268288BD002460ED /* DetailWireFrameTests.swift */,
 			);
 			path = DetailModule;
-			sourceTree = "<group>";
-		};
-		A459A58B2682888F002460ED /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		A459A58C26828896002460ED /* Domain */ = {
@@ -925,7 +917,6 @@
 		A4B93C8E268022440045A1D4 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
-				A4B93C91268025DD0045A1D4 /* Data */,
 				A4B93C90268025D60045A1D4 /* Domain */,
 				A4B93C92268025E30045A1D4 /* Mocks */,
 				A4B93C93268025EC0045A1D4 /* Presentation */,
@@ -950,13 +941,6 @@
 				A4B2347A2680DAE800795264 /* SearchInteractorTests.swift */,
 			);
 			name = Domain;
-			sourceTree = "<group>";
-		};
-		A4B93C91268025DD0045A1D4 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Data;
 			sourceTree = "<group>";
 		};
 		A4B93C92268025E30045A1D4 /* Mocks */ = {

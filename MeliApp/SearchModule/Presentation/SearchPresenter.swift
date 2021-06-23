@@ -6,7 +6,7 @@ class SearchPresenter  {
 
     var interactor: SearchInteractorInputProtocol?
     var wireFrame: SearchWireFrameProtocol?
-    var idSite = String()
+    private var idSite = String()
     
     convenience init(
         view: SearchViewProtocol,

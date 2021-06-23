@@ -12,5 +12,4 @@ class SearchInteractorOutputMock: SearchInteractorOutputProtocol {
     func interactorPushDataPresenter(receivedData: [SearchViewModel]) {
         interactorPushDataPresenterCalled = true
     }
-    
 }

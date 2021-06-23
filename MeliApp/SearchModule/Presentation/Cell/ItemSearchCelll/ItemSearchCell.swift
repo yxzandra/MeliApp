@@ -7,7 +7,7 @@ class ItemSearchCell: UITableViewCell {
     @IBOutlet weak var mercadoPriceLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
-    typealias Constants = SearchViewConstants.ItemSearchCell
+    private typealias Constants = SearchViewConstants.ItemSearchCell
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,93 +20,92 @@ class ItemSearchCell: UITableViewCell {
     }
     
     private func prepareItemImage() {
-        itemImage.topAnchor.constraint(
-            equalTo: contentView.topAnchor,
-            constant: Constants.marginItem
-        ).isActive = true
-        
-        itemImage.heightAnchor.constraint(
-            equalToConstant: Constants.sizeImageItem
-        ).isActive = true
-        
-        itemImage.widthAnchor.constraint(
-            equalToConstant: Constants.sizeImageItem
-        ).isActive = true
-        
-        itemImage.leadingAnchor.constraint(
-            equalTo: contentView.leadingAnchor,
-            constant: Constants.marginItem
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            itemImage.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: Constants.marginItem
+            ),
+            itemImage.heightAnchor.constraint(
+                equalToConstant: Constants.sizeImageItem
+            ),
+            itemImage.widthAnchor.constraint(
+                equalToConstant: Constants.sizeImageItem
+            ),
+            itemImage.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: Constants.marginItem
+            )
+        ])
         
         itemImage.contentMode = .scaleToFill
     }
 
     private func prepareTitleLabel() {
-        titleLabel.topAnchor.constraint(
-            equalTo: contentView.topAnchor,
-            constant: CGFloat(5)
-        ).isActive = true
-        
-        titleLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginItem
-        ).isActive = true
-        
-        titleLabel.leadingAnchor.constraint(
-            equalTo: itemImage.trailingAnchor,
-            constant: -Constants.marginItem
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: CGFloat(5)
+            ),
+            titleLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginItem
+            ),
+            titleLabel.leadingAnchor.constraint(
+                equalTo: itemImage.trailingAnchor,
+                constant: -Constants.marginItem
+            )
+        ])
     }
 
     private func preparePriceLabel() {
-        priceLabel.topAnchor.constraint(
-            equalTo: titleLabel.topAnchor,
-            constant: Constants.marginBetweenLabel
-        ).isActive = true
-        
-        priceLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginItem
-        ).isActive = true
-        
-        priceLabel.leadingAnchor.constraint(
-            equalTo: itemImage.trailingAnchor,
-            constant: Constants.marginItem
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            priceLabel.topAnchor.constraint(
+                equalTo: titleLabel.topAnchor,
+                constant: Constants.marginBetweenLabel
+            ),
+            priceLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginItem
+            ),
+            priceLabel.leadingAnchor.constraint(
+                equalTo: itemImage.trailingAnchor,
+                constant: Constants.marginItem
+            )
+        ])
     }
 
     private func prepareMercadoPriceLabel() {
-        mercadoPriceLabel.topAnchor.constraint(
-            equalTo: priceLabel.topAnchor,
-            constant: Constants.marginBetweenLabel
-        ).isActive = true
-
-        mercadoPriceLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginItem
-        ).isActive = true
-
-        mercadoPriceLabel.leadingAnchor.constraint(
-            equalTo: itemImage.trailingAnchor,
-            constant: Constants.marginItem
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            mercadoPriceLabel.topAnchor.constraint(
+                equalTo: priceLabel.topAnchor,
+                constant: Constants.marginBetweenLabel
+            ),
+            mercadoPriceLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginItem
+            ),
+            mercadoPriceLabel.leadingAnchor.constraint(
+                equalTo: itemImage.trailingAnchor,
+                constant: Constants.marginItem
+            )
+        ])
     }
 
     private func prepareAddressLabel() {
-        addressLabel.topAnchor.constraint(
-            equalTo: mercadoPriceLabel.topAnchor,
-            constant: Constants.marginBetweenLabel
-        ).isActive = true
-        
-        addressLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginItem
-        ).isActive = true
-
-        addressLabel.leadingAnchor.constraint(
-            equalTo: itemImage.trailingAnchor,
-            constant: Constants.marginItem
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            addressLabel.topAnchor.constraint(
+                equalTo: mercadoPriceLabel.topAnchor,
+                constant: Constants.marginBetweenLabel
+            ),
+            addressLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginItem
+            ),
+            addressLabel.leadingAnchor.constraint(
+                equalTo: itemImage.trailingAnchor,
+                constant: Constants.marginItem
+            )
+        ])
     }
     
     private func prepareContentView() {

@@ -6,7 +6,7 @@ class ErrorSiteCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var retryLabel: UILabel!
     
-    typealias Constants = SitesViewConstants.ErrorSiteCell
+    private typealias Constants = SitesViewConstants.ErrorSiteCell
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,53 +18,55 @@ class ErrorSiteCell: UITableViewCell {
     }
     
     private func prepareTitleLabel() {
-        titleLabel.topAnchor.constraint(
-            equalTo: contentView.topAnchor,
-            constant: Constants.marginTopBottom
-        ).isActive = true
-        
-        titleLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginError
-        ).isActive = true
-        
-        titleLabel.leadingAnchor.constraint(
-            equalTo: errorImage.trailingAnchor,
-            constant: Constants.marginError
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: Constants.marginTopBottom
+            ),
+            titleLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginError
+            ),
+            titleLabel.leadingAnchor.constraint(
+                equalTo: errorImage.trailingAnchor,
+                constant: Constants.marginError
+            ),
+        ])
     }
 
     private func prepareSubtitleLabel() {
-        subtitleLabel.topAnchor.constraint(
-            equalTo: titleLabel.topAnchor,
-            constant: Constants.marginTopTitle
-        ).isActive = true
-        
-        subtitleLabel.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginError
-        ).isActive = true
-        
-        subtitleLabel.leadingAnchor.constraint(
-            equalTo: errorImage.trailingAnchor,
-            constant: Constants.marginError
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            subtitleLabel.topAnchor.constraint(
+                equalTo: titleLabel.topAnchor,
+                constant: Constants.marginTopTitle
+            ),
+            subtitleLabel.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginError
+            ),
+            subtitleLabel.leadingAnchor.constraint(
+                equalTo: errorImage.trailingAnchor,
+                constant: Constants.marginError
+            )
+        ])
     }
 
     private func prepareImage() {
-        errorImage.topAnchor.constraint(
-            equalTo: contentView.topAnchor,
-            constant: Constants.marginError
-        ).isActive = true
-        
-        errorImage.heightAnchor.constraint(
-            equalToConstant: Constants.sizeImageError
-        ).isActive = true
-        
-        errorImage.widthAnchor.constraint(
-            equalToConstant: Constants.sizeImageError
-        ).isActive = true
-        
+        NSLayoutConstraint.activate([
+            errorImage.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: Constants.marginError
+            ),
+            
+            errorImage.heightAnchor.constraint(
+                equalToConstant: Constants.sizeImageError
+            ),
+            
+            errorImage.widthAnchor.constraint(
+                equalToConstant: Constants.sizeImageError
+            )
+        ])
+
         Layout.marginPin(of: errorImage, in: contentView)
     }
     

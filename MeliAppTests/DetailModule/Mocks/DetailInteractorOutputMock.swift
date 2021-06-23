@@ -22,5 +22,4 @@ class DetailInteractorOutputMock: DetailInteractorOutputProtocol {
     func interactorPushDescriptionPresenter(receivedData: String) {
         interactorPushDescriptionPresenterCalled = true
     }
-    
 }

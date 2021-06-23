@@ -15,7 +15,6 @@ class DetailInteractor: DetailInteractorInputProtocol {
         self.remoteDatamanager = remoteDatamanager
     }
 
-    
     func getDetailItem(idItem: String) {
         remoteDatamanager?.externalDetailItem(idItem: idItem)
     }

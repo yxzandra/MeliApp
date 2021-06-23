@@ -1,6 +1,5 @@
 import Foundation
 
-
 class SitesInteractor: NSObject {
     weak var presenter: SitesInteractorOutputProtocol?
     var localDatamanager: SitesLocalDataManagerInputProtocol?
@@ -22,7 +21,7 @@ class SitesInteractor: NSObject {
         if let idSite = localDatamanager?.getSiteSaved(), let index = siteList.firstIndex(where: {$0.id == idSite}) {
             var siteListResult = siteList
             let element = siteListResult.remove(at: index)
-            siteListResult.insert(element, at: 0)
+            siteListResult.insert(element, at: .zero)
             return siteListResult
         }
         return siteList

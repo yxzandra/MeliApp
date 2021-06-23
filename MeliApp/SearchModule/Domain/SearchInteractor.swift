@@ -4,7 +4,7 @@ class SearchInteractor: SearchInteractorInputProtocol {
     // MARK: Properties
     weak var presenter: SearchInteractorOutputProtocol?
     var remoteDatamanager: SearchRemoteDataManagerInputProtocol?
-    let mapper = SearchMapper()
+    private let mapper = SearchMapper()
     
     convenience init(
         presenter: SearchInteractorOutputProtocol,

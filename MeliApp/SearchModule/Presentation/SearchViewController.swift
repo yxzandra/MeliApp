@@ -2,9 +2,9 @@ import Foundation
 import UIKit
 
 class SearchViewController: UIViewController {
-    typealias Constants = SearchViewConstants
     internal var presenter: SearchPresenterProtocol?
     
+    private typealias Constants = SearchViewConstants
     private var mainDispatchQueue: DispatchQueue?
     private var delegate: SearchDelegate?
     private var dataSource: SearchDataSource?

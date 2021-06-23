@@ -38,6 +38,4 @@ class DetailViewMock: DetailViewProtocol {
     func presenterErrorDescriptionView() {
         presenterErrorDescriptionViewCalled = true
     }
-    
-    
 }

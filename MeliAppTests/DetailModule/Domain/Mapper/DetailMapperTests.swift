@@ -2,7 +2,6 @@ import XCTest
 @testable import MeliApp
 
 class DetailMapperTests: XCTestCase {
-    
     var sut: DetailMapper!
     
     override func setUp() {

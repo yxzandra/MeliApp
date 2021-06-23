@@ -8,7 +8,6 @@ class TitleSiteCell: UITableViewCell {
         super.awakeFromNib()
         prepareLogoImage()
         prepareContentLabel()
-        
     }
 
     private func prepareLogoImage() {
@@ -21,14 +20,14 @@ class TitleSiteCell: UITableViewCell {
     }
     
     private func prepareContentLabel() {
-        contentLabel.topAnchor.constraint(
-            equalTo: logoImage.topAnchor
-        ).isActive = true
-        
-        contentLabel.bottomAnchor.constraint(
-            equalTo: contentView.bottomAnchor
-        ).isActive = true
-        
+        NSLayoutConstraint.activate([
+            contentLabel.topAnchor.constraint(
+                equalTo: logoImage.topAnchor
+            ),
+            contentLabel.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor
+            )
+        ])
         Layout.marginPin(of: contentLabel, in: contentView)
     }
 }
