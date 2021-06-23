@@ -1,9 +1,9 @@
 import UIKit
 
 class SitesDataSource: NSObject {
-    typealias Constants = SitesViewConstants
     weak var viewController: SitesViewController?
-    var cellTypes = SitesCellTypes.default
+    private typealias Constants = SitesViewConstants
+    private var cellTypes = SitesCellTypes.default
     
     private func prepareTitle(_ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NibCell.nibTitleSiteCell, for: indexPath)

@@ -4,7 +4,7 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     
-    typealias Constants = SearchViewConstants.SearchCell
+    private typealias Constants = SearchViewConstants.SearchCell
     var textChangeAction: ((String) -> Void)? = nil
     
     override func awakeFromNib() {
@@ -21,20 +21,20 @@ class SearchCell: UITableViewCell {
         searchTextField.autocorrectionType = UITextAutocorrectionType.no
         searchTextField.clearButtonMode = UITextField.ViewMode.whileEditing
         
-        searchTextField.topAnchor.constraint(
-            equalTo: contentView.topAnchor,
-            constant: Constants.marginSearch
-        ).isActive = true
-
-        searchTextField.leadingAnchor.constraint(
-            equalTo: contentView.leadingAnchor,
-            constant: Constants.marginSearch
-        ).isActive = true
-
-        searchTextField.bottomAnchor.constraint(
-            equalTo: contentView.bottomAnchor,
-            constant: -Constants.marginSearch
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            searchTextField.topAnchor.constraint(
+                equalTo: contentView.topAnchor,
+                constant: Constants.marginSearch
+            ),
+            searchTextField.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: Constants.marginSearch
+            ),
+            searchTextField.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: -Constants.marginSearch
+            )
+        ])
     }
     
     private func prepareSearchButton() {
@@ -42,16 +42,17 @@ class SearchCell: UITableViewCell {
         self.searchButton.setTitleColor(.titleColor, for: .normal)
         self.searchButton.translatesAutoresizingMaskIntoConstraints = false
         self.searchButton.addTarget(self, action: #selector(searchTouchUpInside), for: .touchUpInside)
-        
-        searchButton.trailingAnchor.constraint(
-            equalTo: contentView.trailingAnchor,
-            constant: -Constants.marginSearch
-        ).isActive = true
 
-        searchButton.leadingAnchor.constraint(
-            equalTo: searchTextField.trailingAnchor,
-            constant: Constants.marginLeftTextField
-        ).isActive = true
+        NSLayoutConstraint.activate([
+            searchButton.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Constants.marginSearch
+            ),
+            searchButton.leadingAnchor.constraint(
+                equalTo: searchTextField.trailingAnchor,
+                constant: Constants.marginLeftTextField
+            )
+        ])
 
         Layout.centerYAnchor(of: searchButton, in: searchTextField)
     }

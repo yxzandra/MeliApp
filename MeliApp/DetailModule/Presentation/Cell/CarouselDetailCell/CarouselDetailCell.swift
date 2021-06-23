@@ -79,5 +79,4 @@ extension CarouselDetailCell: UIScrollViewDelegate {
         let pageIndex = round(carouselScroll.contentOffset.x/contentView.frame.width)
         pageControl.currentPage = Int(pageIndex)
     }
-    
 }

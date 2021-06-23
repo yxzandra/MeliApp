@@ -3,8 +3,7 @@ import XCTest
 
 class SearchWireFrameTests: XCTestCase {
     var sut: SearchWireFrame!
-    
-    
+
     override func setUp() {
         super.setUp()
         sut = SearchWireFrame()

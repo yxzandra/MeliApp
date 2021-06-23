@@ -1,9 +1,9 @@
 import UIKit
 
 class SitesViewController: UIViewController {
-    typealias Constants = SitesViewConstants
     internal var presenter: SitesPresenterProtocol?
     
+    private typealias Constants = SitesViewConstants
     private var mainDispatchQueue: DispatchQueue?
     private var delegate: SitesDelegate?
     private var dataSource: SitesDataSource?

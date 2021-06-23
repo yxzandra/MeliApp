@@ -9,14 +9,14 @@ class ItemSiteCell: UITableViewCell {
     }
 
     private func prepareNameLabel() {
-        nameLabel.topAnchor.constraint(
-            equalTo: contentView.topAnchor
-        ).isActive = true
-
-        nameLabel.bottomAnchor.constraint(
-            equalTo: contentView.bottomAnchor
-        ).isActive = true
-        
+        NSLayoutConstraint.activate([
+            nameLabel.topAnchor.constraint(
+                equalTo: contentView.topAnchor
+            ),
+            nameLabel.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor
+            )
+        ])
         Layout.marginPin(of: nameLabel, in: contentView, constant: CGFloat(6))
     }
 }

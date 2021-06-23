@@ -1,9 +1,9 @@
 import UIKit
 
 class SearchDataSource: NSObject {
-    typealias Constants = SearchViewConstants.NibCell
     weak var viewController: SearchViewController?
-    var cellTypes = SearchCellTypes.default
+    private typealias Constants = SearchViewConstants.NibCell
+    private var cellTypes = SearchCellTypes.default
     
     private func prepareSearch(_ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.nibSearchCell, for: indexPath) as? SearchCell

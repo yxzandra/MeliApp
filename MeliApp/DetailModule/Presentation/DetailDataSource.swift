@@ -1,9 +1,10 @@
 import UIKit
 
 class DetailDataSource: NSObject {
-    typealias Constants = DetailViewConstants
     weak var viewController: DetailViewController?
-    var cellTypes = DetailCellTypes.default
+
+    private typealias Constants = DetailViewConstants
+    private var cellTypes = DetailCellTypes.default
     
     private func prepareCarousel(_ viewModel: DetailViewModel?, _ tableView: UITableView, _ indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.NibCell.nibCarouselDetailCell, for: indexPath) as? CarouselDetailCell
