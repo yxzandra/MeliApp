@@ -67,6 +67,7 @@ class DetailViewController: UIViewController {
         tableView.register(UINib(nibName: Constants.NibCell.nibCarouselDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibCarouselDetailCell)
         tableView.register(UINib(nibName: Constants.NibCell.nibHeaderDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibHeaderDetailCell)
         tableView.register(UINib(nibName: Constants.NibCell.nibDescriptionDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibDescriptionDetailCell)
+        tableView.register(UINib(nibName: Constants.NibCell.nibErrorDetailCell, bundle: nil), forCellReuseIdentifier: Constants.NibCell.nibErrorDetailCell)
     }
     
     private func prepareActivityIndicator() {

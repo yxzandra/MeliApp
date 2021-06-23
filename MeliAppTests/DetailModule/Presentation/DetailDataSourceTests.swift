@@ -33,12 +33,12 @@ class DetailDatasourceTests: XCTestCase {
     
     func testNumberOfRowsReturnsOneWhenViewModelIsNil() {
         let tableView = findTableView(parentView: viewController.view)
-        let cellTypes = DetailCellTypes.default
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: nil, showError: viewController.showError)
         
         for numSection in 0 ..< cellTypes.count {
             let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: numSection)
             
-            XCTAssertEqual(numberOfRows, 3)
+            XCTAssertEqual(numberOfRows, 1)
             XCTAssertNil(viewController.viewModel)
             XCTAssertFalse(viewController.showError)
         }
@@ -58,7 +58,7 @@ class DetailDatasourceTests: XCTestCase {
     
     func testCellTypeIsCorrectWhenViewModelNotNil() {
         let viewModel = DetailViewModel.mocked()
-        let cellTypes = DetailCellTypes.default
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: viewModel, showError: viewController.showError)
         let tableView = findTableView(parentView: viewController.view)
 
         viewController.presenterPushDataView(receivedData: viewModel)
@@ -85,23 +85,51 @@ class DetailDatasourceTests: XCTestCase {
                     indexPath: indexPath,
                     cellType: DescriptionDetailCell.self
                 )
+            case .error:
+                assertCellIsOfType(
+                    tableView: tableView,
+                    indexPath: indexPath,
+                    cellType: UITableViewCell.self
+                )
             }
         }
     }
     
     func testCellTypeIsCorrectWhenErrorIsTrue() {
-        let cellTypes = DetailCellTypes.default
         let tableView = findTableView(parentView: viewController.view)
 
         viewController.presenterErrorDataView()
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: nil, showError: viewController.showError)
 
         for numSection in 0 ..< cellTypes.count {
-            let indexPath = IndexPath(row: 0, section: numSection)
-            assertCellIsOfType(
-                tableView: tableView,
-                indexPath: indexPath,
-                cellType: UITableViewCell.self
-            )
+            let row = cellTypes[numSection]
+            let indexPath = IndexPath(row: numSection, section: .zero)
+            switch row {
+            case .carousel:
+                assertCellIsOfType(
+                    tableView: tableView,
+                    indexPath: indexPath,
+                    cellType: CarouselDetailCell.self
+                )
+            case .header:
+                assertCellIsOfType(
+                    tableView: tableView,
+                    indexPath: indexPath,
+                    cellType: UITableViewCell.self
+                )
+            case .description:
+                assertCellIsOfType(
+                    tableView: tableView,
+                    indexPath: indexPath,
+                    cellType: UITableViewCell.self
+                )
+            case .error:
+                assertCellIsOfType(
+                    tableView: tableView,
+                    indexPath: indexPath,
+                    cellType: ErrorDetailCell.self
+                )
+            }
         }
     }
     

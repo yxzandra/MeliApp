@@ -33,6 +33,8 @@
 		A41922C92676D3E700C967E0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41922C82676D3E700C967E0 /* UIViewExtension.swift */; };
 		A425D2B5267816E500852F37 /* ItemSiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A425D2B3267816E500852F37 /* ItemSiteCell.swift */; };
 		A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A425D2B4267816E500852F37 /* ItemSiteCell.xib */; };
+		A42CB01C268356C200430F63 /* ErrorDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CB01A268356C200430F63 /* ErrorDetailCell.swift */; };
+		A42CB01D268356C200430F63 /* ErrorDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A42CB01B268356C200430F63 /* ErrorDetailCell.xib */; };
 		A44B84A9267C2107005C348D /* SitesRemoteDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */; };
 		A44B84AD267C2154005C348D /* sites_404.json in Resources */ = {isa = PBXBuildFile; fileRef = A44B84AC267C2154005C348D /* sites_404.json */; };
 		A44B84B1267C23D4005C348D /* SitesLocalDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */; };
@@ -200,6 +202,8 @@
 		A41922C82676D3E700C967E0 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A425D2B3267816E500852F37 /* ItemSiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSiteCell.swift; sourceTree = "<group>"; };
 		A425D2B4267816E500852F37 /* ItemSiteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemSiteCell.xib; sourceTree = "<group>"; };
+		A42CB01A268356C200430F63 /* ErrorDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetailCell.swift; sourceTree = "<group>"; };
+		A42CB01B268356C200430F63 /* ErrorDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorDetailCell.xib; sourceTree = "<group>"; };
 		A44B84A8267C2106005C348D /* SitesRemoteDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesRemoteDataManagerMock.swift; sourceTree = "<group>"; };
 		A44B84AC267C2154005C348D /* sites_404.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sites_404.json; sourceTree = "<group>"; };
 		A44B84B0267C23D4005C348D /* SitesLocalDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesLocalDataManagerMock.swift; sourceTree = "<group>"; };
@@ -539,6 +543,15 @@
 				A425D2B4267816E500852F37 /* ItemSiteCell.xib */,
 			);
 			path = ItemSiteCell;
+			sourceTree = "<group>";
+		};
+		A42CB019268356A700430F63 /* ErrorDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				A42CB01A268356C200430F63 /* ErrorDetailCell.swift */,
+				A42CB01B268356C200430F63 /* ErrorDetailCell.xib */,
+			);
+			path = ErrorDetailCell;
 			sourceTree = "<group>";
 		};
 		A459A57526823462002460ED /* CarouselDetailCell */ = {
@@ -886,6 +899,7 @@
 			children = (
 				A459A57526823462002460ED /* CarouselDetailCell */,
 				A459A57F268259DB002460ED /* DescriptionDetailCell */,
+				A42CB019268356A700430F63 /* ErrorDetailCell */,
 				A459A57626823475002460ED /* HeaderDetailCell */,
 			);
 			path = Cell;
@@ -1146,6 +1160,7 @@
 				A425D2B6267816E500852F37 /* ItemSiteCell.xib in Resources */,
 				A459A58526825B44002460ED /* DescriptionDetailCell.xib in Resources */,
 				A465B1F726781EAA00201B51 /* TitleSiteCell.xib in Resources */,
+				A42CB01D268356C200430F63 /* ErrorDetailCell.xib in Resources */,
 				A419226E2676873400C967E0 /* Assets.xcassets in Resources */,
 				A4B93C8A267F939C0045A1D4 /* ErrorSearchCell.xib in Resources */,
 			);
@@ -1330,6 +1345,7 @@
 				A4654101267E696D009E1730 /* SearchWireFrame.swift in Sources */,
 				A4654119267EB6F7009E1730 /* SearchDataSource.swift in Sources */,
 				A459A57B268234AB002460ED /* HeaderDetailCell.swift in Sources */,
+				A42CB01C268356C200430F63 /* ErrorDetailCell.swift in Sources */,
 				A46540FF267E696D009E1730 /* SearchViewController.swift in Sources */,
 				A41922B326769F2000C967E0 /* SitesCellTypes.swift in Sources */,
 				A465411B267EB704009E1730 /* SearchDelegate.swift in Sources */,

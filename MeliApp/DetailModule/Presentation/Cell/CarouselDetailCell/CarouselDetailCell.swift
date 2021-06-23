@@ -3,6 +3,7 @@ import UIKit
 class CarouselDetailCell: UITableViewCell {
     @IBOutlet weak var carouselScroll: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var imageBackground: UIImageView!
     
     private let withScreen = UIScreen.main.bounds.size.width
     
@@ -15,6 +16,7 @@ class CarouselDetailCell: UITableViewCell {
     }
     
     func loadData(imageList: [String]) {
+        imageBackground.isHidden = true
         loadImages(imageList)
         
         pageControl.numberOfPages = imageList.count
@@ -22,6 +24,11 @@ class CarouselDetailCell: UITableViewCell {
         pageControl.currentPageIndicatorTintColor = .titleColor
         pageControl.tintColor = .gray
         pageControl.pageIndicatorTintColor = .lightGray
+    }
+    
+    func loadPlaceholderBackground() {
+        imageBackground.isHidden = false
+        Layout.center(view: imageBackground, in: contentView)
     }
     
     private func loadImages(_ imageList: [String]) {

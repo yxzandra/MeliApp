@@ -6,12 +6,19 @@ class DetailDelegate: NSObject {
 
 extension DetailDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellSection = DetailCellTypes.default[indexPath.row]
+        guard let view = viewController else { return }
+        let viewModel = view.viewModel
+        
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: viewModel, showError: view.showError)
+        let cellSection = cellTypes[indexPath.row]
+        
         switch cellSection {
         case .carousel, .header:
             break
         case .description:
             viewController?.validateDescription()
+        case .error:
+            viewController?.presenter?.viewDidLoad(idItem: view.idItem)
         }
     }
 

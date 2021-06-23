@@ -4,12 +4,15 @@ import XCTest
 class DetailDelegateTests: XCTestCase {
     var sut: DetailDelegate!
     var tableView: UITableView!
+    var presenter: DetailPresenterMock!
     var viewController: DetailViewControllerMock!
     
     override func setUp() {
         super.setUp()
         sut = DetailDelegate()
+        presenter = DetailPresenterMock()
         viewController = DetailViewControllerMock()
+        viewController.presenter = presenter
         tableView = UITableView()
         
         sut.viewController = viewController
@@ -23,9 +26,9 @@ class DetailDelegateTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDidSelectRowRoutesWhenAppropiate() {
-        let cellTypes = DetailCellTypes.default
+    func testDidSelectRowRoutesWhenViewModelNotNil() {
         let viewModel = DetailViewModel.mocked()
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: viewModel, showError: false)
         sut.viewController?.presenterPushDataView(receivedData: viewModel)
 
         for segmentIndex in 0 ..< cellTypes.count {
@@ -38,6 +41,30 @@ class DetailDelegateTests: XCTestCase {
             case .description:
                 sut.tableView(tableView, didSelectRowAt: indexPath)
                 XCTAssertTrue(viewController.validateDescriptionCalled)
+            case .error:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(presenter.viewDidLoadCalled)
+            }
+        }
+    }
+    
+    func testDidSelectRowRoutesWhenShowErrorTrue() {
+        let cellTypes = DetailCellTypes.filteredCellTypes(viewModel: nil, showError: true)
+        sut.viewController?.presenterErrorDataView()
+
+        for segmentIndex in 0 ..< cellTypes.count {
+            let indexPath = IndexPath(row: segmentIndex, section: .zero)
+            let cellSection = cellTypes[segmentIndex]
+            switch cellSection {
+            case .carousel, .header:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                break
+            case .description:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(viewController.validateDescriptionCalled)
+            case .error:
+                sut.tableView(tableView, didSelectRowAt: indexPath)
+                XCTAssertTrue(presenter.viewDidLoadCalled)
             }
         }
     }

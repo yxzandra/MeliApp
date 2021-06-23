@@ -8,42 +8,50 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorSearchCell" customModule="MeliApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ErrorSearchCell" id="KGk-i7-Jjw" customClass="ErrorSearchCell" customModule="MeliApp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ErrorDetailCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ErrorDetailCell" customModule="MeliApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="errorConection" translatesAutoresizingMaskIntoConstraints="NO" id="1eL-my-f0J">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="errorConection" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-z3-MYz">
                         <rect key="frame" x="16" y="44" width="100" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inténtalo de nuevo mas tarde o con una nueva palabra." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c1-eZ-eCO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inténtalo de nuevo mas tarde o recarga la vista." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTW-XW-kGh">
                         <rect key="frame" x="124" y="79" width="180" height="65"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" name="ErrorTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ups! Algo salió mal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfq-cR-7xv">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ups! Algo salió mal!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXC-1t-hhw">
                         <rect key="frame" x="124" y="44" width="180" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" name="ErrorTitleTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reintentar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agf-ug-nVt">
+                        <rect key="frame" x="16" y="157" width="288" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="TitleColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageError" destination="1eL-my-f0J" id="aKx-tb-stj"/>
-                <outlet property="subtitleLabel" destination="9c1-eZ-eCO" id="4BF-6X-HLd"/>
-                <outlet property="titleLabel" destination="nfq-cR-7xv" id="yoJ-OK-tzs"/>
+                <outlet property="errorImage" destination="6RT-z3-MYz" id="42w-pi-iAM"/>
+                <outlet property="retryLabel" destination="agf-ug-nVt" id="no3-4U-Em3"/>
+                <outlet property="subtitleLabel" destination="vTW-XW-kGh" id="wPj-v5-YzT"/>
+                <outlet property="titleLabel" destination="cXC-1t-hhw" id="WQK-ty-a0Q"/>
             </connections>
-            <point key="canvasLocation" x="173.91304347826087" y="130.24553571428572"/>
+            <point key="canvasLocation" x="24.637681159420293" y="149.66517857142856"/>
         </tableViewCell>
     </objects>
     <resources>
@@ -53,6 +61,9 @@
         </namedColor>
         <namedColor name="ErrorTitleTextColor">
             <color red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.14509803921568629" green="0.14901960784313725" blue="0.37254901960784315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
